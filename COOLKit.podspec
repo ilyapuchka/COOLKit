@@ -27,7 +27,7 @@ COOL application components.
     ns.dependency 'EasyMapping', '~>0.8.x'
   end
 
-  s.subspec 'DataSources' do 'ds'
+  s.subspec 'DataSources' |ds|
     ds.source_files = "COOLKit/COOLDataSources/**/*.{h,m}"
     ds.dependency 'COOLKit/Compositions'
     ds.dependency 'COOLKit/NetworkStack'
