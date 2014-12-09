@@ -4,7 +4,7 @@ Pod::Spec.new do |s|
   s.summary      = "COOL application components."
 
   s.description  = <<-DESC
-COOL application components.
+COOL application components. Contains compositions, data sources, network stack and table view/collection view decorators.
                    DESC
 
   s.homepage     = "https://github.com/ilyapuchka/COOLKit"
