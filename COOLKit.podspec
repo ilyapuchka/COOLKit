@@ -14,7 +14,7 @@ COOL application components. Contains compositions, data sources, network stack 
   s.source       = { :git => "git@github.com:ilyapuchka/COOLKit.git", :tag => "0.0.1" }
   s.requires_arc = true
 
-  s.default_subspecs = 'Compositions', 'NetworkStack', 'DataSources', 'Decorators'
+  s.source_files = "COOLKit/COOLKit.h"
 
   s.subspec 'Compositions' do |cmp|
     cmp.source_files = "COOLKit/COOLCompositions/**/*.{h,m}"
