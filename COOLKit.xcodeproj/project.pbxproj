@@ -1,0 +1,747 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		09EF1CFC1A3626550045DFFE /* libCOOLKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 09EF1CF01A3626550045DFFE /* libCOOLKit.a */; };
+		09EF1D5B1A3627080045DFFE /* NSArray+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EF1D0E1A3627080045DFFE /* NSArray+Extensions.m */; };
+		09EF1D5C1A3627080045DFFE /* COOLComposition.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EF1D101A3627080045DFFE /* COOLComposition.m */; };
+		09EF1D5D1A3627080045DFFE /* COOLSwitchComposition.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EF1D131A3627080045DFFE /* COOLSwitchComposition.m */; };
+		09EF1D5E1A3627080045DFFE /* NSString+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EF1D181A3627080045DFFE /* NSString+Extensions.m */; };
+		09EF1D5F1A3627080045DFFE /* COOLAPIClientDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EF1D1A1A3627080045DFFE /* COOLAPIClientDataSource.m */; };
+		09EF1D601A3627080045DFFE /* COOLComposedDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EF1D1C1A3627080045DFFE /* COOLComposedDataSource.m */; };
+		09EF1D611A3627080045DFFE /* COOLDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EF1D1E1A3627080045DFFE /* COOLDataSource.m */; };
+		09EF1D621A3627080045DFFE /* COOLLoadingProcess.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EF1D221A3627080045DFFE /* COOLLoadingProcess.m */; };
+		09EF1D631A3627080045DFFE /* COOLSwitchDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EF1D241A3627080045DFFE /* COOLSwitchDataSource.m */; };
+		09EF1D641A3627080045DFFE /* COOLLoadingStateMachine.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EF1D271A3627080045DFFE /* COOLLoadingStateMachine.m */; };
+		09EF1D651A3627080045DFFE /* COOLStateMachine.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EF1D291A3627080045DFFE /* COOLStateMachine.m */; };
+		09EF1D6D1A3627080045DFFE /* AFHTTPRequestSerializer+COOLAPIRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EF1D411A3627080045DFFE /* AFHTTPRequestSerializer+COOLAPIRequestSerialization.m */; };
+		09EF1D6E1A3627080045DFFE /* COOLAPIClientImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EF1D441A3627080045DFFE /* COOLAPIClientImpl.m */; };
+		09EF1D6F1A3627080045DFFE /* COOLHTTPResponseSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EF1D461A3627080045DFFE /* COOLHTTPResponseSerializer.m */; };
+		09EF1D701A3627080045DFFE /* COOLAPIRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EF1D491A3627080045DFFE /* COOLAPIRequest.m */; };
+		09EF1D711A3627080045DFFE /* COOLAPIResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EF1D4C1A3627080045DFFE /* COOLAPIResponse.m */; };
+		09EF1D721A3627080045DFFE /* COOLMapperImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EF1D501A3627080045DFFE /* COOLMapperImpl.m */; };
+		09EF1D731A3627080045DFFE /* COOLNetworkActivityLoggerImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EF1D531A3627080045DFFE /* COOLNetworkActivityLoggerImpl.m */; };
+		09EF1D8A1A3790FB0045DFFE /* COOLCollectionViewWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EF1D771A3790FB0045DFFE /* COOLCollectionViewWrapper.m */; };
+		09EF1D8B1A3790FB0045DFFE /* COOLIndexPathsMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EF1D791A3790FB0045DFFE /* COOLIndexPathsMapping.m */; };
+		09EF1D8C1A3790FB0045DFFE /* COOLTableViewWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EF1D7B1A3790FB0045DFFE /* COOLTableViewWrapper.m */; };
+		09EF1D8D1A3790FB0045DFFE /* COOLWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EF1D7D1A3790FB0045DFFE /* COOLWrapper.m */; };
+		09EF1D8E1A3790FB0045DFFE /* COOLComposedTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EF1D801A3790FB0045DFFE /* COOLComposedTableViewDataSource.m */; };
+		09EF1D901A3790FB0045DFFE /* COOLTableViewDelegatingWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EF1D851A3790FB0045DFFE /* COOLTableViewDelegatingWrapper.m */; };
+		09EF1D981A3793660045DFFE /* COOLListViewDecorator.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EF1D971A3793660045DFFE /* COOLListViewDecorator.m */; };
+		94FDD26C979888F331CAB11C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F133CAF0072657D852B9CDCF /* libPods.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		09EF1CFD1A3626550045DFFE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 09EF1CE81A3626550045DFFE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 09EF1CEF1A3626550045DFFE;
+			remoteInfo = COOLKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		09EF1CEE1A3626550045DFFE /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		09EF1CF01A3626550045DFFE /* libCOOLKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCOOLKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		09EF1CFB1A3626550045DFFE /* COOLKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = COOLKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		09EF1D011A3626550045DFFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		09EF1D0D1A3627080045DFFE /* NSArray+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Extensions.h"; sourceTree = "<group>"; };
+		09EF1D0E1A3627080045DFFE /* NSArray+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Extensions.m"; sourceTree = "<group>"; };
+		09EF1D0F1A3627080045DFFE /* COOLComposition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COOLComposition.h; sourceTree = "<group>"; };
+		09EF1D101A3627080045DFFE /* COOLComposition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COOLComposition.m; sourceTree = "<group>"; };
+		09EF1D121A3627080045DFFE /* COOLSwitchComposition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COOLSwitchComposition.h; sourceTree = "<group>"; };
+		09EF1D131A3627080045DFFE /* COOLSwitchComposition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COOLSwitchComposition.m; sourceTree = "<group>"; };
+		09EF1D171A3627080045DFFE /* NSString+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extensions.h"; sourceTree = "<group>"; };
+		09EF1D181A3627080045DFFE /* NSString+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extensions.m"; sourceTree = "<group>"; };
+		09EF1D191A3627080045DFFE /* COOLAPIClientDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COOLAPIClientDataSource.h; sourceTree = "<group>"; };
+		09EF1D1A1A3627080045DFFE /* COOLAPIClientDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COOLAPIClientDataSource.m; sourceTree = "<group>"; };
+		09EF1D1B1A3627080045DFFE /* COOLComposedDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COOLComposedDataSource.h; sourceTree = "<group>"; };
+		09EF1D1C1A3627080045DFFE /* COOLComposedDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COOLComposedDataSource.m; sourceTree = "<group>"; };
+		09EF1D1D1A3627080045DFFE /* COOLDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COOLDataSource.h; sourceTree = "<group>"; };
+		09EF1D1E1A3627080045DFFE /* COOLDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COOLDataSource.m; sourceTree = "<group>"; };
+		09EF1D1F1A3627080045DFFE /* COOLDataSourceDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COOLDataSourceDelegate.h; sourceTree = "<group>"; };
+		09EF1D201A3627080045DFFE /* COOLDataSources.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COOLDataSources.h; sourceTree = "<group>"; };
+		09EF1D211A3627080045DFFE /* COOLLoadingProcess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COOLLoadingProcess.h; sourceTree = "<group>"; };
+		09EF1D221A3627080045DFFE /* COOLLoadingProcess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COOLLoadingProcess.m; sourceTree = "<group>"; };
+		09EF1D231A3627080045DFFE /* COOLSwitchDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COOLSwitchDataSource.h; sourceTree = "<group>"; };
+		09EF1D241A3627080045DFFE /* COOLSwitchDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COOLSwitchDataSource.m; sourceTree = "<group>"; };
+		09EF1D261A3627080045DFFE /* COOLLoadingStateMachine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COOLLoadingStateMachine.h; sourceTree = "<group>"; };
+		09EF1D271A3627080045DFFE /* COOLLoadingStateMachine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COOLLoadingStateMachine.m; sourceTree = "<group>"; };
+		09EF1D281A3627080045DFFE /* COOLStateMachine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COOLStateMachine.h; sourceTree = "<group>"; };
+		09EF1D291A3627080045DFFE /* COOLStateMachine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COOLStateMachine.m; sourceTree = "<group>"; };
+		09EF1D401A3627080045DFFE /* AFHTTPRequestSerializer+COOLAPIRequestSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AFHTTPRequestSerializer+COOLAPIRequestSerialization.h"; sourceTree = "<group>"; };
+		09EF1D411A3627080045DFFE /* AFHTTPRequestSerializer+COOLAPIRequestSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AFHTTPRequestSerializer+COOLAPIRequestSerialization.m"; sourceTree = "<group>"; };
+		09EF1D421A3627080045DFFE /* COOLAPIClientBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COOLAPIClientBlocks.h; sourceTree = "<group>"; };
+		09EF1D431A3627080045DFFE /* COOLAPIClientImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COOLAPIClientImpl.h; sourceTree = "<group>"; };
+		09EF1D441A3627080045DFFE /* COOLAPIClientImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COOLAPIClientImpl.m; sourceTree = "<group>"; };
+		09EF1D451A3627080045DFFE /* COOLHTTPResponseSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COOLHTTPResponseSerializer.h; sourceTree = "<group>"; };
+		09EF1D461A3627080045DFFE /* COOLHTTPResponseSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COOLHTTPResponseSerializer.m; sourceTree = "<group>"; };
+		09EF1D481A3627080045DFFE /* COOLAPIRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COOLAPIRequest.h; sourceTree = "<group>"; };
+		09EF1D491A3627080045DFFE /* COOLAPIRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COOLAPIRequest.m; sourceTree = "<group>"; };
+		09EF1D4B1A3627080045DFFE /* COOLAPIResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COOLAPIResponse.h; sourceTree = "<group>"; };
+		09EF1D4C1A3627080045DFFE /* COOLAPIResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COOLAPIResponse.m; sourceTree = "<group>"; };
+		09EF1D4D1A3627080045DFFE /* COOLNetworkStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COOLNetworkStack.h; sourceTree = "<group>"; };
+		09EF1D4F1A3627080045DFFE /* COOLMapperImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COOLMapperImpl.h; sourceTree = "<group>"; };
+		09EF1D501A3627080045DFFE /* COOLMapperImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COOLMapperImpl.m; sourceTree = "<group>"; };
+		09EF1D521A3627080045DFFE /* COOLNetworkActivityLoggerImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COOLNetworkActivityLoggerImpl.h; sourceTree = "<group>"; };
+		09EF1D531A3627080045DFFE /* COOLNetworkActivityLoggerImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COOLNetworkActivityLoggerImpl.m; sourceTree = "<group>"; };
+		09EF1D551A3627080045DFFE /* COOLAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COOLAPIClient.h; sourceTree = "<group>"; };
+		09EF1D561A3627080045DFFE /* COOLAPIRequestSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COOLAPIRequestSerialization.h; sourceTree = "<group>"; };
+		09EF1D571A3627080045DFFE /* COOLAPIResponseSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COOLAPIResponseSerialization.h; sourceTree = "<group>"; };
+		09EF1D581A3627080045DFFE /* COOLMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COOLMapper.h; sourceTree = "<group>"; };
+		09EF1D591A3627080045DFFE /* COOLMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COOLMapping.h; sourceTree = "<group>"; };
+		09EF1D5A1A3627080045DFFE /* COOLNetworkActivityLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COOLNetworkActivityLogger.h; sourceTree = "<group>"; };
+		09EF1D741A3627270045DFFE /* COOLCompositions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COOLCompositions.h; sourceTree = "<group>"; };
+		09EF1D761A3790FB0045DFFE /* COOLCollectionViewWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COOLCollectionViewWrapper.h; sourceTree = "<group>"; };
+		09EF1D771A3790FB0045DFFE /* COOLCollectionViewWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COOLCollectionViewWrapper.m; sourceTree = "<group>"; };
+		09EF1D781A3790FB0045DFFE /* COOLIndexPathsMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COOLIndexPathsMapping.h; sourceTree = "<group>"; };
+		09EF1D791A3790FB0045DFFE /* COOLIndexPathsMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COOLIndexPathsMapping.m; sourceTree = "<group>"; };
+		09EF1D7A1A3790FB0045DFFE /* COOLTableViewWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COOLTableViewWrapper.h; sourceTree = "<group>"; };
+		09EF1D7B1A3790FB0045DFFE /* COOLTableViewWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COOLTableViewWrapper.m; sourceTree = "<group>"; };
+		09EF1D7C1A3790FB0045DFFE /* COOLWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COOLWrapper.h; sourceTree = "<group>"; };
+		09EF1D7D1A3790FB0045DFFE /* COOLWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COOLWrapper.m; sourceTree = "<group>"; };
+		09EF1D7F1A3790FB0045DFFE /* COOLComposedTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COOLComposedTableViewDataSource.h; sourceTree = "<group>"; };
+		09EF1D801A3790FB0045DFFE /* COOLComposedTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COOLComposedTableViewDataSource.m; sourceTree = "<group>"; };
+		09EF1D811A3790FB0045DFFE /* COOLDecorators.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COOLDecorators.h; sourceTree = "<group>"; };
+		09EF1D841A3790FB0045DFFE /* COOLTableViewDelegatingWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COOLTableViewDelegatingWrapper.h; sourceTree = "<group>"; };
+		09EF1D851A3790FB0045DFFE /* COOLTableViewDelegatingWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COOLTableViewDelegatingWrapper.m; sourceTree = "<group>"; };
+		09EF1D861A3790FB0045DFFE /* COOLTableViewDisplayDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COOLTableViewDisplayDataSource.h; sourceTree = "<group>"; };
+		09EF1D871A3790FB0045DFFE /* COOLTableViewEditingDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COOLTableViewEditingDelegate.h; sourceTree = "<group>"; };
+		09EF1D881A3790FB0045DFFE /* COOLTableViewEventsResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COOLTableViewEventsResponder.h; sourceTree = "<group>"; };
+		09EF1D911A37913F0045DFFE /* COOLTableViewDecorator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COOLTableViewDecorator.h; sourceTree = "<group>"; };
+		09EF1D921A37914F0045DFFE /* COOLCollectionViewDecorator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COOLCollectionViewDecorator.h; sourceTree = "<group>"; };
+		09EF1D961A3793660045DFFE /* COOLListViewDecorator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COOLListViewDecorator.h; sourceTree = "<group>"; };
+		09EF1D971A3793660045DFFE /* COOLListViewDecorator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COOLListViewDecorator.m; sourceTree = "<group>"; };
+		B4AE2B61C055D48D30B5A382 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		E32AF5ABB26EA14C611857DF /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		F133CAF0072657D852B9CDCF /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		09EF1CED1A3626550045DFFE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94FDD26C979888F331CAB11C /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		09EF1CF81A3626550045DFFE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09EF1CFC1A3626550045DFFE /* libCOOLKit.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		09EF1CE71A3626550045DFFE = {
+			isa = PBXGroup;
+			children = (
+				09EF1CF21A3626550045DFFE /* COOLKit */,
+				09EF1CFF1A3626550045DFFE /* COOLKitTests */,
+				09EF1CF11A3626550045DFFE /* Products */,
+				7384BD541050D3D836FD7E6C /* Pods */,
+				8BC2C4D67F03A8AD5FF100FF /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		09EF1CF11A3626550045DFFE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				09EF1CF01A3626550045DFFE /* libCOOLKit.a */,
+				09EF1CFB1A3626550045DFFE /* COOLKitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		09EF1CF21A3626550045DFFE /* COOLKit */ = {
+			isa = PBXGroup;
+			children = (
+				09EF1D0A1A3627080045DFFE /* COOLCompositions */,
+				09EF1D141A3627080045DFFE /* COOLDataSources */,
+				09EF1D251A3627080045DFFE /* COOLStateMachines */,
+				09EF1D2A1A3627080045DFFE /* COOLDecorators */,
+				09EF1D3E1A3627080045DFFE /* COOLNetworkStack */,
+			);
+			path = COOLKit;
+			sourceTree = "<group>";
+		};
+		09EF1CFF1A3626550045DFFE /* COOLKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				09EF1D001A3626550045DFFE /* Supporting Files */,
+			);
+			path = COOLKitTests;
+			sourceTree = "<group>";
+		};
+		09EF1D001A3626550045DFFE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				09EF1D011A3626550045DFFE /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		09EF1D0A1A3627080045DFFE /* COOLCompositions */ = {
+			isa = PBXGroup;
+			children = (
+				09EF1D741A3627270045DFFE /* COOLCompositions.h */,
+				09EF1D0B1A3627080045DFFE /* Categories */,
+				09EF1D0F1A3627080045DFFE /* COOLComposition.h */,
+				09EF1D101A3627080045DFFE /* COOLComposition.m */,
+				09EF1D121A3627080045DFFE /* COOLSwitchComposition.h */,
+				09EF1D131A3627080045DFFE /* COOLSwitchComposition.m */,
+			);
+			path = COOLCompositions;
+			sourceTree = "<group>";
+		};
+		09EF1D0B1A3627080045DFFE /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				09EF1D0C1A3627080045DFFE /* NSArray */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		09EF1D0C1A3627080045DFFE /* NSArray */ = {
+			isa = PBXGroup;
+			children = (
+				09EF1D0D1A3627080045DFFE /* NSArray+Extensions.h */,
+				09EF1D0E1A3627080045DFFE /* NSArray+Extensions.m */,
+			);
+			path = NSArray;
+			sourceTree = "<group>";
+		};
+		09EF1D141A3627080045DFFE /* COOLDataSources */ = {
+			isa = PBXGroup;
+			children = (
+				09EF1D201A3627080045DFFE /* COOLDataSources.h */,
+				09EF1D151A3627080045DFFE /* Categories */,
+				09EF1D191A3627080045DFFE /* COOLAPIClientDataSource.h */,
+				09EF1D1A1A3627080045DFFE /* COOLAPIClientDataSource.m */,
+				09EF1D1B1A3627080045DFFE /* COOLComposedDataSource.h */,
+				09EF1D1C1A3627080045DFFE /* COOLComposedDataSource.m */,
+				09EF1D1D1A3627080045DFFE /* COOLDataSource.h */,
+				09EF1D1E1A3627080045DFFE /* COOLDataSource.m */,
+				09EF1D1F1A3627080045DFFE /* COOLDataSourceDelegate.h */,
+				09EF1D211A3627080045DFFE /* COOLLoadingProcess.h */,
+				09EF1D221A3627080045DFFE /* COOLLoadingProcess.m */,
+				09EF1D231A3627080045DFFE /* COOLSwitchDataSource.h */,
+				09EF1D241A3627080045DFFE /* COOLSwitchDataSource.m */,
+			);
+			path = COOLDataSources;
+			sourceTree = "<group>";
+		};
+		09EF1D151A3627080045DFFE /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				09EF1D161A3627080045DFFE /* NSString */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		09EF1D161A3627080045DFFE /* NSString */ = {
+			isa = PBXGroup;
+			children = (
+				09EF1D171A3627080045DFFE /* NSString+Extensions.h */,
+				09EF1D181A3627080045DFFE /* NSString+Extensions.m */,
+			);
+			path = NSString;
+			sourceTree = "<group>";
+		};
+		09EF1D251A3627080045DFFE /* COOLStateMachines */ = {
+			isa = PBXGroup;
+			children = (
+				09EF1D261A3627080045DFFE /* COOLLoadingStateMachine.h */,
+				09EF1D271A3627080045DFFE /* COOLLoadingStateMachine.m */,
+				09EF1D281A3627080045DFFE /* COOLStateMachine.h */,
+				09EF1D291A3627080045DFFE /* COOLStateMachine.m */,
+			);
+			name = COOLStateMachines;
+			path = "COOLDataSources/State Machines";
+			sourceTree = "<group>";
+		};
+		09EF1D2A1A3627080045DFFE /* COOLDecorators */ = {
+			isa = PBXGroup;
+			children = (
+				09EF1D751A3790FB0045DFFE /* Private */,
+				09EF1D7E1A3790FB0045DFFE /* Public */,
+			);
+			path = COOLDecorators;
+			sourceTree = "<group>";
+		};
+		09EF1D3E1A3627080045DFFE /* COOLNetworkStack */ = {
+			isa = PBXGroup;
+			children = (
+				09EF1D4D1A3627080045DFFE /* COOLNetworkStack.h */,
+				09EF1D3F1A3627080045DFFE /* APIClient */,
+				09EF1D471A3627080045DFFE /* APIReqests */,
+				09EF1D4A1A3627080045DFFE /* APIResponses */,
+				09EF1D4E1A3627080045DFFE /* Mapper */,
+				09EF1D511A3627080045DFFE /* NetworkActivityLogger */,
+				09EF1D541A3627080045DFFE /* Protocols */,
+			);
+			path = COOLNetworkStack;
+			sourceTree = "<group>";
+		};
+		09EF1D3F1A3627080045DFFE /* APIClient */ = {
+			isa = PBXGroup;
+			children = (
+				09EF1D401A3627080045DFFE /* AFHTTPRequestSerializer+COOLAPIRequestSerialization.h */,
+				09EF1D411A3627080045DFFE /* AFHTTPRequestSerializer+COOLAPIRequestSerialization.m */,
+				09EF1D421A3627080045DFFE /* COOLAPIClientBlocks.h */,
+				09EF1D431A3627080045DFFE /* COOLAPIClientImpl.h */,
+				09EF1D441A3627080045DFFE /* COOLAPIClientImpl.m */,
+				09EF1D451A3627080045DFFE /* COOLHTTPResponseSerializer.h */,
+				09EF1D461A3627080045DFFE /* COOLHTTPResponseSerializer.m */,
+			);
+			path = APIClient;
+			sourceTree = "<group>";
+		};
+		09EF1D471A3627080045DFFE /* APIReqests */ = {
+			isa = PBXGroup;
+			children = (
+				09EF1D481A3627080045DFFE /* COOLAPIRequest.h */,
+				09EF1D491A3627080045DFFE /* COOLAPIRequest.m */,
+			);
+			path = APIReqests;
+			sourceTree = "<group>";
+		};
+		09EF1D4A1A3627080045DFFE /* APIResponses */ = {
+			isa = PBXGroup;
+			children = (
+				09EF1D4B1A3627080045DFFE /* COOLAPIResponse.h */,
+				09EF1D4C1A3627080045DFFE /* COOLAPIResponse.m */,
+			);
+			path = APIResponses;
+			sourceTree = "<group>";
+		};
+		09EF1D4E1A3627080045DFFE /* Mapper */ = {
+			isa = PBXGroup;
+			children = (
+				09EF1D4F1A3627080045DFFE /* COOLMapperImpl.h */,
+				09EF1D501A3627080045DFFE /* COOLMapperImpl.m */,
+			);
+			path = Mapper;
+			sourceTree = "<group>";
+		};
+		09EF1D511A3627080045DFFE /* NetworkActivityLogger */ = {
+			isa = PBXGroup;
+			children = (
+				09EF1D521A3627080045DFFE /* COOLNetworkActivityLoggerImpl.h */,
+				09EF1D531A3627080045DFFE /* COOLNetworkActivityLoggerImpl.m */,
+			);
+			path = NetworkActivityLogger;
+			sourceTree = "<group>";
+		};
+		09EF1D541A3627080045DFFE /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				09EF1D551A3627080045DFFE /* COOLAPIClient.h */,
+				09EF1D561A3627080045DFFE /* COOLAPIRequestSerialization.h */,
+				09EF1D571A3627080045DFFE /* COOLAPIResponseSerialization.h */,
+				09EF1D581A3627080045DFFE /* COOLMapper.h */,
+				09EF1D591A3627080045DFFE /* COOLMapping.h */,
+				09EF1D5A1A3627080045DFFE /* COOLNetworkActivityLogger.h */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		09EF1D751A3790FB0045DFFE /* Private */ = {
+			isa = PBXGroup;
+			children = (
+				09EF1D761A3790FB0045DFFE /* COOLCollectionViewWrapper.h */,
+				09EF1D771A3790FB0045DFFE /* COOLCollectionViewWrapper.m */,
+				09EF1D781A3790FB0045DFFE /* COOLIndexPathsMapping.h */,
+				09EF1D791A3790FB0045DFFE /* COOLIndexPathsMapping.m */,
+				09EF1D7A1A3790FB0045DFFE /* COOLTableViewWrapper.h */,
+				09EF1D7B1A3790FB0045DFFE /* COOLTableViewWrapper.m */,
+				09EF1D7C1A3790FB0045DFFE /* COOLWrapper.h */,
+				09EF1D7D1A3790FB0045DFFE /* COOLWrapper.m */,
+			);
+			path = Private;
+			sourceTree = "<group>";
+		};
+		09EF1D7E1A3790FB0045DFFE /* Public */ = {
+			isa = PBXGroup;
+			children = (
+				09EF1D7F1A3790FB0045DFFE /* COOLComposedTableViewDataSource.h */,
+				09EF1D801A3790FB0045DFFE /* COOLComposedTableViewDataSource.m */,
+				09EF1D811A3790FB0045DFFE /* COOLDecorators.h */,
+				09EF1D961A3793660045DFFE /* COOLListViewDecorator.h */,
+				09EF1D971A3793660045DFFE /* COOLListViewDecorator.m */,
+				09EF1D911A37913F0045DFFE /* COOLTableViewDecorator.h */,
+				09EF1D921A37914F0045DFFE /* COOLCollectionViewDecorator.h */,
+				09EF1D841A3790FB0045DFFE /* COOLTableViewDelegatingWrapper.h */,
+				09EF1D851A3790FB0045DFFE /* COOLTableViewDelegatingWrapper.m */,
+				09EF1D861A3790FB0045DFFE /* COOLTableViewDisplayDataSource.h */,
+				09EF1D871A3790FB0045DFFE /* COOLTableViewEditingDelegate.h */,
+				09EF1D881A3790FB0045DFFE /* COOLTableViewEventsResponder.h */,
+			);
+			path = Public;
+			sourceTree = "<group>";
+		};
+		7384BD541050D3D836FD7E6C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E32AF5ABB26EA14C611857DF /* Pods.debug.xcconfig */,
+				B4AE2B61C055D48D30B5A382 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8BC2C4D67F03A8AD5FF100FF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F133CAF0072657D852B9CDCF /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		09EF1CEF1A3626550045DFFE /* COOLKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 09EF1D041A3626550045DFFE /* Build configuration list for PBXNativeTarget "COOLKit" */;
+			buildPhases = (
+				14EF4D8F152577C7423F654F /* Check Pods Manifest.lock */,
+				09EF1CEC1A3626550045DFFE /* Sources */,
+				09EF1CED1A3626550045DFFE /* Frameworks */,
+				09EF1CEE1A3626550045DFFE /* CopyFiles */,
+				D4718986CB224D59C63BF843 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = COOLKit;
+			productName = COOLKit;
+			productReference = 09EF1CF01A3626550045DFFE /* libCOOLKit.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		09EF1CFA1A3626550045DFFE /* COOLKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 09EF1D071A3626550045DFFE /* Build configuration list for PBXNativeTarget "COOLKitTests" */;
+			buildPhases = (
+				09EF1CF71A3626550045DFFE /* Sources */,
+				09EF1CF81A3626550045DFFE /* Frameworks */,
+				09EF1CF91A3626550045DFFE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				09EF1CFE1A3626550045DFFE /* PBXTargetDependency */,
+			);
+			name = COOLKitTests;
+			productName = COOLKitTests;
+			productReference = 09EF1CFB1A3626550045DFFE /* COOLKitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		09EF1CE81A3626550045DFFE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Ilya Puchka";
+				TargetAttributes = {
+					09EF1CEF1A3626550045DFFE = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					09EF1CFA1A3626550045DFFE = {
+						CreatedOnToolsVersion = 6.1;
+					};
+				};
+			};
+			buildConfigurationList = 09EF1CEB1A3626550045DFFE /* Build configuration list for PBXProject "COOLKit" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 09EF1CE71A3626550045DFFE;
+			productRefGroup = 09EF1CF11A3626550045DFFE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				09EF1CEF1A3626550045DFFE /* COOLKit */,
+				09EF1CFA1A3626550045DFFE /* COOLKitTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		09EF1CF91A3626550045DFFE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		14EF4D8F152577C7423F654F /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D4718986CB224D59C63BF843 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		09EF1CEC1A3626550045DFFE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09EF1D901A3790FB0045DFFE /* COOLTableViewDelegatingWrapper.m in Sources */,
+				09EF1D711A3627080045DFFE /* COOLAPIResponse.m in Sources */,
+				09EF1D8C1A3790FB0045DFFE /* COOLTableViewWrapper.m in Sources */,
+				09EF1D5B1A3627080045DFFE /* NSArray+Extensions.m in Sources */,
+				09EF1D6E1A3627080045DFFE /* COOLAPIClientImpl.m in Sources */,
+				09EF1D8E1A3790FB0045DFFE /* COOLComposedTableViewDataSource.m in Sources */,
+				09EF1D621A3627080045DFFE /* COOLLoadingProcess.m in Sources */,
+				09EF1D701A3627080045DFFE /* COOLAPIRequest.m in Sources */,
+				09EF1D8B1A3790FB0045DFFE /* COOLIndexPathsMapping.m in Sources */,
+				09EF1D5C1A3627080045DFFE /* COOLComposition.m in Sources */,
+				09EF1D5D1A3627080045DFFE /* COOLSwitchComposition.m in Sources */,
+				09EF1D601A3627080045DFFE /* COOLComposedDataSource.m in Sources */,
+				09EF1D8D1A3790FB0045DFFE /* COOLWrapper.m in Sources */,
+				09EF1D981A3793660045DFFE /* COOLListViewDecorator.m in Sources */,
+				09EF1D731A3627080045DFFE /* COOLNetworkActivityLoggerImpl.m in Sources */,
+				09EF1D611A3627080045DFFE /* COOLDataSource.m in Sources */,
+				09EF1D6F1A3627080045DFFE /* COOLHTTPResponseSerializer.m in Sources */,
+				09EF1D721A3627080045DFFE /* COOLMapperImpl.m in Sources */,
+				09EF1D6D1A3627080045DFFE /* AFHTTPRequestSerializer+COOLAPIRequestSerialization.m in Sources */,
+				09EF1D5F1A3627080045DFFE /* COOLAPIClientDataSource.m in Sources */,
+				09EF1D5E1A3627080045DFFE /* NSString+Extensions.m in Sources */,
+				09EF1D631A3627080045DFFE /* COOLSwitchDataSource.m in Sources */,
+				09EF1D651A3627080045DFFE /* COOLStateMachine.m in Sources */,
+				09EF1D641A3627080045DFFE /* COOLLoadingStateMachine.m in Sources */,
+				09EF1D8A1A3790FB0045DFFE /* COOLCollectionViewWrapper.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		09EF1CF71A3626550045DFFE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		09EF1CFE1A3626550045DFFE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 09EF1CEF1A3626550045DFFE /* COOLKit */;
+			targetProxy = 09EF1CFD1A3626550045DFFE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		09EF1D021A3626550045DFFE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		09EF1D031A3626550045DFFE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		09EF1D051A3626550045DFFE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E32AF5ABB26EA14C611857DF /* Pods.debug.xcconfig */;
+			buildSettings = {
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		09EF1D061A3626550045DFFE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4AE2B61C055D48D30B5A382 /* Pods.release.xcconfig */;
+			buildSettings = {
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		09EF1D081A3626550045DFFE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = COOLKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		09EF1D091A3626550045DFFE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = COOLKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		09EF1CEB1A3626550045DFFE /* Build configuration list for PBXProject "COOLKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				09EF1D021A3626550045DFFE /* Debug */,
+				09EF1D031A3626550045DFFE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		09EF1D041A3626550045DFFE /* Build configuration list for PBXNativeTarget "COOLKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				09EF1D051A3626550045DFFE /* Debug */,
+				09EF1D061A3626550045DFFE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		09EF1D071A3626550045DFFE /* Build configuration list for PBXNativeTarget "COOLKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				09EF1D081A3626550045DFFE /* Debug */,
+				09EF1D091A3626550045DFFE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 09EF1CE81A3626550045DFFE /* Project object */;
+}
