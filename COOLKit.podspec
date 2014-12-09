@@ -15,6 +15,7 @@ COOL application components. Contains compositions, data sources, network stack 
   s.requires_arc = true
 
   s.source_files = "COOLKit/COOLKit.h"
+  s.default_subspec = "Kit"
 
   s.subspec 'Compositions' do |cmp|
     cmp.source_files = "COOLKit/COOLCompositions/**/*.{h,m}"
@@ -38,5 +39,16 @@ COOL application components. Contains compositions, data sources, network stack 
     dec.public_header_files = 'COOLKit/COOLDecorators/Public/**/*.h'
     dec.dependency 'COOLKit/Compositions'
   end
+
+  s.subspec 'Kit' do |kit|
+    kit.source_files = "COOLKit/COOLKit.h"
+    kit.dependency 'COOLKit/Compositions'
+    kit.dependency 'COOLKit/NetworkStack'
+    kit.dependency 'COOLKit/DataSources'
+    kit.dependency 'COOLKit/Decorators'
+    kit.dependency 'AFNetworking', '~>2.5.x'
+    kit.dependency 'AFNetworkActivityLogger', '~>2.0.x'
+    kit.dependency 'EasyMapping', '~>0.8.x'
+  end 
   
 end
