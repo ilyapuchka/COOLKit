@@ -1,11 +1,10 @@
-# Uncomment this line to define a global platform for your project
-# platform :ios, '6.0'
+platform :ios, '7.0'
 
 source 'https://github.com/CocoaPods/Specs.git'
 
-pod 'AFNetworking', '~> 2.0'
-pod 'AFNetworkActivityLogger', '~> 2.0'
-pod 'EasyMapping', '~>0.6'
+pod 'AFNetworking', '~> 2.5.x'
+pod 'AFNetworkActivityLogger', '~> 2.0.x'
+pod 'EasyMapping', '~>0.8.x'
 
 target 'COOLKit' do
 
