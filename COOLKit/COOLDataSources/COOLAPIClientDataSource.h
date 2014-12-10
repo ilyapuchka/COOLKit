@@ -18,15 +18,17 @@
  */
 @interface COOLAPIClientDataSource : COOLDataSource
 
+- (instancetype)initWithAPIClient:(id<COOLAPIClient>)apiClient;
+
 /**
  *  Instance of COOLAPIClientImpl used for loading content.
  */
-@property (nonatomic, strong) COOLAPIClientImpl *apiClient;
+@property (nonatomic, strong) id<COOLAPIClient> apiClient;
 
 /**
  *  Response from api client
  */
-@property (nonatomic, copy) id<COOLAPIResponse> response;
+@property (nonatomic, strong) id<COOLAPIResponse> response;
 
 /**
  *  Performs basic completion of loading by checking recieved response object. Will call -didCompleteLoadingWithSuccess and didCompleteLoadingWithNoContent (if -didCompleteLoadingWithSuccess returns NO). Then calls it's current helper loadingProcess instance methods to transit to corresponding state. Also sets response property.

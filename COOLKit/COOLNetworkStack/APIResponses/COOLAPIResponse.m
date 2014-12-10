@@ -19,12 +19,14 @@
 
 @implementation COOLAPIResponse
 
-+ (instancetype)responseWithTask:(NSURLSessionDataTask *)task response:(NSHTTPURLResponse *)response responseObject:(id)responseObject httpError:(NSError *)httpeError
++ (instancetype)responseWithTask:(NSURLSessionDataTask *)task response:(NSHTTPURLResponse *)response responseObject:(id)responseObject httpError:(NSError *)httpError
 {
-    COOLAPIResponse *apiResponse = [[[self class] alloc] initWithTask:task response:response responseObject:responseObject error:httpeError];
-    NSError *mappingError;
-    if (![apiResponse mapResponseObject:&mappingError]) {
-        apiResponse.error = mappingError;
+    COOLAPIResponse *apiResponse = [[[self class] alloc] initWithTask:task response:response responseObject:responseObject error:httpError];
+    if (!httpError) {
+        NSError *mappingError;
+        if (![apiResponse mapResponseObject:&mappingError]) {
+            apiResponse.error = mappingError;
+        }
     }
     return apiResponse;
 }

@@ -17,6 +17,15 @@
 
 @implementation COOLAPIClientDataSource
 
+- (instancetype)initWithAPIClient:(id<COOLAPIClient>)apiClient
+{
+    self = [super init];
+    if (self) {
+        self.apiClient = apiClient;
+    }
+    return self;
+}
+
 - (BOOL)didCompleteLoadingWithSuccess
 {
     return [self.response succes];

@@ -13,7 +13,7 @@
 + (instancetype)responseWithTask:(NSURLSessionDataTask *)task
                         response:(NSHTTPURLResponse *)response
                   responseObject:(id)responseObject
-                       httpError:(NSError *)httpeError;
+                       httpError:(NSError *)httpError;
 
 //returns YES in no error and mappedResponseObject is not nil. Subclasses should override.
 - (BOOL)succes;
