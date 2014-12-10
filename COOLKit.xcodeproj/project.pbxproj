@@ -129,6 +129,7 @@
 		09EF1D921A37914F0045DFFE /* COOLCollectionViewDecorator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COOLCollectionViewDecorator.h; sourceTree = "<group>"; };
 		09EF1D961A3793660045DFFE /* COOLListViewDecorator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COOLListViewDecorator.h; sourceTree = "<group>"; };
 		09EF1D971A3793660045DFFE /* COOLListViewDecorator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COOLListViewDecorator.m; sourceTree = "<group>"; };
+		09EF1D991A37AF3A0045DFFE /* COOLKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COOLKit.h; sourceTree = "<group>"; };
 		B4AE2B61C055D48D30B5A382 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		E32AF5ABB26EA14C611857DF /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		F133CAF0072657D852B9CDCF /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -177,6 +178,7 @@
 		09EF1CF21A3626550045DFFE /* COOLKit */ = {
 			isa = PBXGroup;
 			children = (
+				09EF1D991A37AF3A0045DFFE /* COOLKit.h */,
 				09EF1D0A1A3627080045DFFE /* COOLCompositions */,
 				09EF1D141A3627080045DFFE /* COOLDataSources */,
 				09EF1D251A3627080045DFFE /* COOLStateMachines */,
