@@ -30,6 +30,7 @@
     NSParameterAssert(handler != nil);
     COOLLoadingProcess *loading = [[self alloc] init];
     loading.completionBlock = handler;
+    loading.current = YES;
     return loading;
 }
 
@@ -96,6 +97,12 @@
 - (void)doneWithNoContent:(COOLLoadingProcessDoneBlock)update
 {
     [self _doneWithNewState:COOLLoadingStateNoContent error:nil update:update];
+}
+
+- (void)cancelLoading
+{
+    self.cancelled = YES;
+    [self _doneWithNewState:COOLLoadingStateCancelled error:nil update:nil];
 }
 
 @end

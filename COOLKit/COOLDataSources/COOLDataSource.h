@@ -122,6 +122,8 @@ typedef void (^COOLLoadingBlock)(COOLLoadingProcess *loadingProcess);
  */
 - (void)resetContent NS_REQUIRES_SUPER;
 
+- (void)cancelLoading NS_REQUIRES_SUPER;
+
 @end
 
 

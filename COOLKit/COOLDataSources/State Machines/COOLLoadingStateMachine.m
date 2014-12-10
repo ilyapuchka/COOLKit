@@ -14,6 +14,7 @@ NSString * const COOLLoadingStateRefreshingContent = @"RefreshingState";
 NSString * const COOLLoadingStateContentLoaded = @"LoadedState";
 NSString * const COOLLoadingStateNoContent = @"NoContentState";
 NSString * const COOLLoadingStateError = @"ErrorState";
+NSString * const COOLLoadingStateCancelled = @"CancelledState";
 
 @implementation COOLLoadingStateMachine
 
@@ -21,11 +22,12 @@ NSString * const COOLLoadingStateError = @"ErrorState";
 {
     NSDictionary *validTransitions = @{
                                        COOLLoadingStateInitial : @[COOLLoadingStateLoadingContent],
-                                       COOLLoadingStateLoadingContent : @[COOLLoadingStateContentLoaded, COOLLoadingStateNoContent, COOLLoadingStateError],
-                                       COOLLoadingStateRefreshingContent : @[COOLLoadingStateContentLoaded, COOLLoadingStateNoContent, COOLLoadingStateError],
+                                       COOLLoadingStateLoadingContent : @[COOLLoadingStateContentLoaded, COOLLoadingStateNoContent, COOLLoadingStateError, COOLLoadingStateCancelled],
+                                       COOLLoadingStateRefreshingContent : @[COOLLoadingStateContentLoaded, COOLLoadingStateNoContent, COOLLoadingStateError, COOLLoadingStateCancelled],
                                        COOLLoadingStateContentLoaded : @[COOLLoadingStateRefreshingContent],
                                        COOLLoadingStateNoContent : @[COOLLoadingStateLoadingContent, COOLLoadingStateRefreshingContent],
-                                       COOLLoadingStateError : @[COOLLoadingStateLoadingContent, COOLLoadingStateRefreshingContent]
+                                       COOLLoadingStateError : @[COOLLoadingStateLoadingContent, COOLLoadingStateRefreshingContent],
+                                       COOLLoadingStateCancelled: @[COOLLoadingStateLoadingContent, COOLLoadingStateRefreshingContent]
                                        };
     
     self = [super initWithValidTransitions:validTransitions];

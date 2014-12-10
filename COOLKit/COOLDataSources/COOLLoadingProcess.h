@@ -70,4 +70,9 @@ typedef void (^COOLLoadingProcessDoneBlock)(COOLDataSource *me);
  */
 - (void)doneWithNoContent:(COOLLoadingProcessDoneBlock)block;
 
+- (void)cancelLoading;
+
+@property (nonatomic, getter=isCurrent) BOOL current;
+@property (nonatomic, getter=isCancelled) BOOL cancelled;
+
 @end

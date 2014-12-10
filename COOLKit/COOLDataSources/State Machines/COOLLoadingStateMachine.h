@@ -26,6 +26,8 @@ extern NSString *const COOLLoadingStateNoContent;
 /// An error occurred while loading content.
 extern NSString *const COOLLoadingStateError;
 
+extern NSString * const COOLLoadingStateCancelled;
+
 @interface COOLLoadingStateMachine : COOLStateMachine
 
 @property (weak, atomic) IBOutlet id<COOLStateMachineDelegate> delegate;

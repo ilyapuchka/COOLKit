@@ -57,12 +57,12 @@
         [self.loadingState isEqualToString:COOLLoadingStateLoadingContent]) {
         loadingState = COOLLoadingStateLoadingContent;
     }
-    else if ([self.loadingState isEqualToString:COOLLoadingStateNoContent] ||
-             [self.loadingState isEqualToString:COOLLoadingStateError]) {
-        loadingState = COOLStateUndefined;
+    else if ([self.loadingState isEqualToString:COOLLoadingStateContentLoaded] ||
+             [self.loadingState isEqualToString:COOLLoadingStateRefreshingContent]) {
+        loadingState = COOLLoadingStateRefreshingContent;
     }
     else {
-        loadingState = COOLLoadingStateRefreshingContent;
+        loadingState = COOLStateUndefined;
     }
     self.loadingState = loadingState;
     
@@ -101,7 +101,12 @@
 {
     _stateMachine = nil;
     // Content has been reset, if we're loading something, chances are we don't need it.
-    self.loadingProcess = nil;
+    self.loadingProcess.current = NO;
+}
+
+- (void)cancelLoading
+{
+    [self.loadingProcess cancelLoading];
 }
 
 - (void)loadContent
@@ -127,6 +132,7 @@
         }];
     }];
     
+    self.loadingProcess.current = NO;
     self.loadingProcess = loadingProcess;
     
     // Call the provided block to actually do the load
