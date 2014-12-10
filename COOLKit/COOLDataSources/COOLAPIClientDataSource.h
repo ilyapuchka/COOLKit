@@ -36,6 +36,8 @@
  *  @param task The task that was created to load content
  *  @param response Response recieved by api client
  */
-- (void)completeLoadingWithTask:(NSURLSessionDataTask *)task response:(id<COOLAPIResponse>)response;
+- (void)completeLoadingWithTask:(NSURLSessionDataTask *)task
+                       response:(id<COOLAPIResponse>)response
+                 loadingProcess:(COOLLoadingProcess *)loadingProcess;
 
 @end

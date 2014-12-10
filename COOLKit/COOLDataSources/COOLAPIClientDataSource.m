@@ -27,23 +27,25 @@
     return [self.response noContent];
 }
 
-- (void)completeLoadingWithTask:(NSURLSessionDataTask *)task response:(id<COOLAPIResponse>)response
+- (void)completeLoadingWithTask:(NSURLSessionDataTask *)task response:(id<COOLAPIResponse>)response loadingProcess:(COOLLoadingProcess *)loadingProcess
 {
     if (![response.task.originalRequest isEqual:task.originalRequest] ||
-        [response cancelled]) {
-        [self.loadingProcess ignore];
+        [response cancelled] || !loadingProcess.isCurrent) {
+        if (!loadingProcess.isCancelled) {
+            [loadingProcess ignore];
+        }
         return;
     }
 
     self.response = response;
     if ([self didCompleteLoadingWithSuccess]) {
-        [self.loadingProcess doneWithContent:self.onContentBlock];
+        [loadingProcess doneWithContent:self.onContentBlock];
     }
     else if ([self didCompleteLoadingWithNoContent]) {
-        [self.loadingProcess doneWithNoContent:self.onNoContentBlock];
+        [loadingProcess doneWithNoContent:self.onNoContentBlock];
     }
     else {
-        [self.loadingProcess doneWithError:response.error update:self.onErrorBlock];
+        [loadingProcess doneWithError:response.error update:self.onErrorBlock];
     }
 }
 
