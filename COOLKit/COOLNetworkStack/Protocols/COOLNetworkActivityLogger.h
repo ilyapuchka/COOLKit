@@ -8,9 +8,18 @@
 
 #import <Foundation/Foundation.h>
 
+typedef NS_ENUM(NSUInteger, COOLLoggerLevel) {
+    COOLLoggerLevelOff,
+    COOLLoggerLevelDebug,
+    COOLLoggerLevelInfo,
+    COOLLoggerLevelWarn,
+    COOLLoggerLevelError,
+    COOLLoggerLevelFatal = COOLLoggerLevelOff,
+};
+
 @protocol COOLNetworkActivityLogger <NSObject>
 
-@property (nonatomic, assign) NSInteger level;
+@property (nonatomic, assign) COOLLoggerLevel level;
 @property (nonatomic, strong) NSPredicate *filterPredicate;
 
 - (void)startLogging;
