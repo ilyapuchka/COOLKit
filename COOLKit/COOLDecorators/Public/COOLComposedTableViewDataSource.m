@@ -84,38 +84,84 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     [self updateMappings];
-
-    id<UITableViewDataSource> dataSource = [self tableViewDataSourceForSection:section];
-    COOLTableViewWrapper *wrapper = [self wrapperForTableView:tableView section:section];
-    NSInteger localSection = [wrapper.indexPathsMapping sectionBeforeWrappingForSectionAfterWrapping:section];
-    NSInteger numberOfSections = [dataSource numberOfSectionsInTableView:(UITableView *)wrapper];
-    numberOfSections = numberOfSections == 0? 1: numberOfSections;
-    NSAssert(localSection < numberOfSections, @"local section is out of bounds for composed data source");
-
-    return [dataSource tableView:(UITableView *)wrapper numberOfRowsInSection:localSection];
+    NSInteger numberOfSections = [[self performAndReturnOnTableView:tableView inSection:section block:^id(id<UITableViewDataSourceDelegate> _dataSource, UITableView *_tableView, NSInteger _section) {
+        NSInteger _numberOfSections = [_dataSource tableView:_tableView numberOfRowsInSection:_section];
+        _numberOfSections = _numberOfSections == 0? 1: _numberOfSections;
+        NSAssert(_section < _numberOfSections, @"local section is out of bounds for composed data source");
+        return @(_numberOfSections);
+    }] integerValue];
+    return numberOfSections;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    id<UITableViewDataSource> dataSource = [self tableViewDataSourceForIndexPath:indexPath];
-    COOLTableViewWrapper *wrapper = [self wrapperForTableView:tableView indexPath:indexPath];
-    NSIndexPath *localIndexPath = [self wrapper:wrapper indexPathForIndexPath:indexPath];
-    return [dataSource tableView:(UITableView *)wrapper cellForRowAtIndexPath:localIndexPath];
+    return [self performAndReturnOnTableView:tableView atIndexPath:indexPath block:^id(id<UITableViewDataSourceDelegate> _dataSource, UITableView *_tableView, NSIndexPath *_indexPath) {
+        return [_dataSource tableView:_tableView cellForRowAtIndexPath:_indexPath];
+    }];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    id<UITableViewDelegate> dataSource = [self tableViewDataSourceForIndexPath:indexPath];
-    if ([dataSource respondsToSelector:@selector(tableView:didSelectRowAtIndexPath:)]) {
-        COOLTableViewWrapper *wrapper = [self wrapperForTableView:tableView indexPath:indexPath];
-        NSIndexPath *localIndexPath = [self wrapper:wrapper indexPathForIndexPath:indexPath];
-        [dataSource tableView:(UITableView *)wrapper didSelectRowAtIndexPath:localIndexPath];
-    }
+    [self performOnTableView:tableView atIndexPath:indexPath block:^(id<UITableViewDataSourceDelegate> _delegate, UITableView *_tableView, NSIndexPath *_indexPath) {
+        if ([_delegate respondsToSelector:@selector(tableView:didSelectRowAtIndexPath:)]) {
+            [_delegate tableView:_tableView didSelectRowAtIndexPath:_indexPath];
+        }
+    }];
 }
 
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+- (void)performOnTableView:(UITableView *)tableView inSection:(NSInteger)section block:(COOLBlockOnTableViewInSection)block
 {
-    return @"header";
+    [self performAndReturnOnTableView:tableView inSection:section block:^id(id<UITableViewDataSourceDelegate> _dataSource, UITableView *_tableView, NSInteger _section) {
+        block(_dataSource, _tableView, _section);
+        return nil;
+    }];
+}
+
+- (id)performAndReturnOnTableView:(UITableView *)tableView inSection:(NSInteger)section block:(COOLReturnBlockOnTableViewInSection)block
+{
+    id<UITableViewDataSourceDelegate> dataSource = [self tableViewDataSourceForSection:section];
+    COOLTableViewWrapper *wrapper = [self wrapperForTableView:tableView section:section];
+    NSInteger localSection = [wrapper.indexPathsMapping sectionBeforeWrappingForSectionAfterWrapping:section];
+    return block(dataSource, (UITableView *)wrapper, localSection);
+}
+
+- (void)performOnTableView:(UITableView *)tableView atIndexPath:(NSIndexPath *)indexPath block:(COOLBlockOnTableViewAtIndexPath)block
+{
+    [self performAndReturnOnTableView:tableView atIndexPath:indexPath block:^id(id<UITableViewDataSourceDelegate> _dataSource, UITableView *_tableView, NSIndexPath *_indexPath) {
+        block(_dataSource, _tableView, _indexPath);
+        return nil;
+    }];
+}
+
+- (id)performAndReturnOnTableView:(UITableView *)tableView atIndexPath:(NSIndexPath *)indexPath block:(COOLReturnBlockOnTableViewAtIndexPath)block
+{
+    id<UITableViewDataSourceDelegate> dataSource = [self tableViewDataSourceForIndexPath:indexPath];
+    COOLTableViewWrapper *wrapper = [self wrapperForTableView:tableView indexPath:indexPath];
+    NSIndexPath *localIndexPath = [self wrapper:wrapper indexPathForIndexPath:indexPath];
+    return block(dataSource, (UITableView *)wrapper, localIndexPath);
+}
+
+- (void)performOnTableView:(UITableView *)tableView
+             fromIndexPath:(NSIndexPath *)fromIndexPath
+               toIndexPath:(NSIndexPath *)toIndexPath
+                     block:(COOLBlockOnTableViewFromIndexPathToIndexPath)block
+{
+    [self performAndReturnOnTableView:tableView fromIndexPath:fromIndexPath toIndexPath:toIndexPath block:^id(id<UITableViewDataSourceDelegate> _dataSource, UITableView *_tableView, NSIndexPath *_fromIndexPath, NSIndexPath *_toIndexPath) {
+        block(_dataSource, _tableView, _fromIndexPath, _toIndexPath);
+        return nil;
+    }];
+}
+
+- (id)performAndReturnOnTableView:(UITableView *)tableView
+                    fromIndexPath:(NSIndexPath *)fromIndexPath
+                      toIndexPath:(NSIndexPath *)toIndexPath
+                            block:(COOLReturnBlockOnTableViewFromIndexPathToIndexPath)block
+{
+    id<UITableViewDataSourceDelegate> dataSource = [self tableViewDataSourceForIndexPath:fromIndexPath];
+    COOLTableViewWrapper *wrapper = [self wrapperForTableView:tableView indexPath:fromIndexPath];
+    NSIndexPath *localFromIndexPath = [self wrapper:wrapper indexPathForIndexPath:fromIndexPath];
+    NSIndexPath *localToIndexPath = [self wrapper:wrapper indexPathForIndexPath:toIndexPath];
+    return block(dataSource, (UITableView *)wrapper, localFromIndexPath, localToIndexPath);
 }
 
 - (void)registerReusableViewsInTableView:(UITableView *)tableView
@@ -133,15 +179,13 @@
     return [dataSource itemAtIndexPath:mappedIndexPath];
 }
 
-- (NSArray *)itemsInSectionAtIndex:(NSInteger)section
+- (NSArray *)itemsInSection:(NSInteger)section
 {
     COOLIndexPathsMapping *mapping = [self mappingForSectionAtIndex:section];
     id<COOLTableViewDisplayDataSource> dataSource = [self tableViewDisplayDataSourceForSection:section];
     NSInteger mappedSection = [mapping sectionBeforeWrappingForSectionAfterWrapping:section];
-    return [dataSource itemsInSectionAtIndex:mappedSection];
+    return [dataSource itemsInSection:mappedSection];
 }
-
-#pragma mark - Private
 
 - (id<UITableViewDataSourceDelegate>)tableViewDataSourceForSection:(NSInteger)section
 {
@@ -154,6 +198,8 @@
     return [self tableViewDataSourceForSection:indexPath.section];
 }
 
+#pragma mark - Private
+
 - (id<COOLTableViewDisplayDataSource>)tableViewDisplayDataSourceForSection:(NSInteger)section
 {
     return (id<COOLTableViewDisplayDataSource>)[self tableViewDataSourceForSection:section];
@@ -163,7 +209,6 @@
 {
     return [self tableViewDisplayDataSourceForSection:indexPath.section];
 }
-
 
 - (COOLTableViewWrapper *)wrapperForTableView:(UITableView *)tableView section:(NSInteger)section
 {

@@ -17,7 +17,7 @@
 
 - (void)registerReusableViewsInTableView:(UITableView *)tableView;
 - (id)itemAtIndexPath:(NSIndexPath *)indexPath;
-- (NSArray *)itemsInSectionAtIndex:(NSInteger)section;
+- (NSArray *)itemsInSection:(NSInteger)section;
 
 @optional
 
