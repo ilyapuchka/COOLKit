@@ -99,18 +99,18 @@ enum NSUInteger {
     return self;
 }
 
-- (void)performOnFirstResponder:(void (^)(COOLComposition *))performBlock
+- (void)performOnAllObjects:(void (^)(COOLComposition *))performBlock
 {
-    [self makeFirst];
-    performBlock(self);
     [self makeAll];
+    performBlock(self);
+    [self makeFirst];
 }
 
-- (void)perform:(void (^)(COOLComposition *))performBlock onObjectWithIndex:(NSInteger)index
+- (void)perform:(void (^)(COOLComposition *))performBlock onObjectAtIndex:(NSInteger)index
 {
     [self makeAtIndex:index];
     performBlock(self);
-    [self makeAll];
+    [self makeFirst];
 }
 
 #pragma mark - Invocations forwarding
