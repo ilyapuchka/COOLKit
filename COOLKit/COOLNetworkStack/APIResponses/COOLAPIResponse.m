@@ -71,7 +71,7 @@
 
 - (BOOL)noContent
 {
-    return self.error == nil && self.mappedResponseObject == nil;
+    return [self succes];
 }
 
 - (BOOL)cancelled
