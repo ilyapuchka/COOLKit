@@ -66,7 +66,7 @@
 
 - (BOOL)succes
 {
-    return self.error == nil && self.mappedResponseObject != nil;
+    return self.error == nil && self.responseObject != nil && self.mappedResponseObject != nil;
 }
 
 - (BOOL)noContent
