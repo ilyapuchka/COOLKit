@@ -16,9 +16,6 @@
 
 @interface COOLAPIClientImpl()
 
-@property (nonatomic, strong) id<COOLAPIRequestSerialization> requestSerializer;
-@property (nonatomic, strong) id<COOLAPIResponseSerialization> responseSerializer;
-
 @end
 
 @implementation COOLAPIClientImpl
