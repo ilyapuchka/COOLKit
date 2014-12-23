@@ -54,9 +54,3 @@
 #define COCOAPODS_VERSION_MINOR_AFNetworking_UIKit 5
 #define COCOAPODS_VERSION_PATCH_AFNetworking_UIKit 0
 
-// EasyMapping
-#define COCOAPODS_POD_AVAILABLE_EasyMapping
-#define COCOAPODS_VERSION_MAJOR_EasyMapping 0
-#define COCOAPODS_VERSION_MINOR_EasyMapping 8
-#define COCOAPODS_VERSION_PATCH_EasyMapping 0
-

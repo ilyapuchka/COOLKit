@@ -24,7 +24,6 @@
 		09EF1D6F1A3627080045DFFE /* COOLHTTPResponseSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EF1D461A3627080045DFFE /* COOLHTTPResponseSerializer.m */; };
 		09EF1D701A3627080045DFFE /* COOLAPIRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EF1D491A3627080045DFFE /* COOLAPIRequest.m */; };
 		09EF1D711A3627080045DFFE /* COOLAPIResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EF1D4C1A3627080045DFFE /* COOLAPIResponse.m */; };
-		09EF1D721A3627080045DFFE /* COOLMapperImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EF1D501A3627080045DFFE /* COOLMapperImpl.m */; };
 		09EF1D731A3627080045DFFE /* COOLNetworkActivityLoggerImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EF1D531A3627080045DFFE /* COOLNetworkActivityLoggerImpl.m */; };
 		09EF1D8A1A3790FB0045DFFE /* COOLCollectionViewWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EF1D771A3790FB0045DFFE /* COOLCollectionViewWrapper.m */; };
 		09EF1D8B1A3790FB0045DFFE /* COOLIndexPathsMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EF1D791A3790FB0045DFFE /* COOLIndexPathsMapping.m */; };
@@ -98,8 +97,6 @@
 		09EF1D4B1A3627080045DFFE /* COOLAPIResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COOLAPIResponse.h; sourceTree = "<group>"; };
 		09EF1D4C1A3627080045DFFE /* COOLAPIResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COOLAPIResponse.m; sourceTree = "<group>"; };
 		09EF1D4D1A3627080045DFFE /* COOLNetworkStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COOLNetworkStack.h; sourceTree = "<group>"; };
-		09EF1D4F1A3627080045DFFE /* COOLMapperImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COOLMapperImpl.h; sourceTree = "<group>"; };
-		09EF1D501A3627080045DFFE /* COOLMapperImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COOLMapperImpl.m; sourceTree = "<group>"; };
 		09EF1D521A3627080045DFFE /* COOLNetworkActivityLoggerImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COOLNetworkActivityLoggerImpl.h; sourceTree = "<group>"; };
 		09EF1D531A3627080045DFFE /* COOLNetworkActivityLoggerImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COOLNetworkActivityLoggerImpl.m; sourceTree = "<group>"; };
 		09EF1D551A3627080045DFFE /* COOLAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COOLAPIClient.h; sourceTree = "<group>"; };
@@ -299,7 +296,6 @@
 				09EF1D3F1A3627080045DFFE /* APIClient */,
 				09EF1D471A3627080045DFFE /* APIReqests */,
 				09EF1D4A1A3627080045DFFE /* APIResponses */,
-				09EF1D4E1A3627080045DFFE /* Mapper */,
 				09EF1D511A3627080045DFFE /* NetworkActivityLogger */,
 				09EF1D541A3627080045DFFE /* Protocols */,
 			);
@@ -336,15 +332,6 @@
 				09EF1D4C1A3627080045DFFE /* COOLAPIResponse.m */,
 			);
 			path = APIResponses;
-			sourceTree = "<group>";
-		};
-		09EF1D4E1A3627080045DFFE /* Mapper */ = {
-			isa = PBXGroup;
-			children = (
-				09EF1D4F1A3627080045DFFE /* COOLMapperImpl.h */,
-				09EF1D501A3627080045DFFE /* COOLMapperImpl.m */,
-			);
-			path = Mapper;
 			sourceTree = "<group>";
 		};
 		09EF1D511A3627080045DFFE /* NetworkActivityLogger */ = {
@@ -560,7 +547,6 @@
 				09EF1D731A3627080045DFFE /* COOLNetworkActivityLoggerImpl.m in Sources */,
 				09EF1D611A3627080045DFFE /* COOLDataSource.m in Sources */,
 				09EF1D6F1A3627080045DFFE /* COOLHTTPResponseSerializer.m in Sources */,
-				09EF1D721A3627080045DFFE /* COOLMapperImpl.m in Sources */,
 				09EF1D6D1A3627080045DFFE /* AFHTTPRequestSerializer+COOLAPIRequestSerialization.m in Sources */,
 				09EF1D5F1A3627080045DFFE /* COOLAPIClientDataSource.m in Sources */,
 				09EF1D5E1A3627080045DFFE /* NSString+Extensions.m in Sources */,
