@@ -1,33 +1,22 @@
 //
-//  COOLHTTPResponseSerializer.m
-//  COOLNetworkStack
+//  AFHTTPResponseSerializer+COOLAPIResponseSerialization.m
+//  COOLKit
 //
-//  Created by Ilya Puchka on 05.11.14.
+//  Created by Ilya Puchka on 22.12.14.
 //  Copyright (c) 2014 Ilya Puchka. All rights reserved.
 //
 
-#import "COOLHTTPResponseSerializer.h"
-#import "COOLAPIRequest.h"
-#import "COOLAPIResponse.h"
+#import "AFHTTPResponseSerializer+COOLAPIResponseSerialization.h"
 
-@interface COOLHTTPResponseSerializer()
+@implementation AFHTTPResponseSerializer (COOLAPIResponseSerialization)
 
-@property (nonatomic, copy) NSDictionary *responsesRegisteredForRequests;
-
-@end
-
-@implementation COOLHTTPResponseSerializer
-
-- (instancetype)init
-{
-    return [self initWithResponsesRegisteredForRequests:@{}];
-}
+static NSDictionary *_responsesRegisteredForRequests;
 
 - (instancetype)initWithResponsesRegisteredForRequests:(NSDictionary *)responsesRegisteredForRequests
 {
-    self = [super init];
+    self = [self init];
     if (self) {
-        self.responsesRegisteredForRequests = responsesRegisteredForRequests;
+        _responsesRegisteredForRequests = responsesRegisteredForRequests;
     }
     return self;
 }
@@ -38,15 +27,20 @@
     NSAssert([[apiResponseClass alloc] conformsToProtocol:@protocol(COOLAPIResponse)], @"apiRequestClass should conform to COOLAPIResponse protocol");
     if ([apiRequestClass isSubclassOfClass:[COOLAPIRequest class]] &&
         [apiResponseClass isSubclassOfClass:[COOLAPIResponse class]]) {
-        NSMutableDictionary *mDict = [self.responsesRegisteredForRequests mutableCopy];
+        NSMutableDictionary *mDict = [_responsesRegisteredForRequests?:@{} mutableCopy];
         mDict[NSStringFromClass(apiRequestClass)] = NSStringFromClass(apiResponseClass);
-        self.responsesRegisteredForRequests = mDict;
+        _responsesRegisteredForRequests = [mDict copy];
     }
+}
+
+- (NSDictionary *)responsesRegisteredForRequests
+{
+    return _responsesRegisteredForRequests;
 }
 
 - (Class)APIResponseClassForAPIRequestClass:(Class)apiRequestClass
 {
-    return NSClassFromString(self.responsesRegisteredForRequests[NSStringFromClass(apiRequestClass)]);
+    return NSClassFromString(_responsesRegisteredForRequests[NSStringFromClass(apiRequestClass)]);
 }
 
 - (id<COOLAPIResponse>)responseForRequest:(COOLAPIRequest *)request task:(NSURLSessionDataTask *)task httpResponse:(NSHTTPURLResponse *)httpResponse responseObject:(id)responseObject httpError:(NSError *)httpError

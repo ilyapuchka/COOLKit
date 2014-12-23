@@ -12,7 +12,7 @@
 #import "COOLAPIResponse.h"
 
 #import "AFHTTPRequestSerializer+COOLAPIRequestSerialization.h"
-#import "COOLHTTPResponseSerializer.h"
+#import "AFHTTPResponseSerializer+COOLAPIResponseSerialization.h"
 
 @interface COOLAPIClientImpl()
 
@@ -38,7 +38,7 @@
     self = [super initWithBaseURL:url sessionConfiguration:configuration];
     if (self) {
         self.requestSerializer = [AFHTTPRequestSerializer serializer];
-        self.responseSerializer = [COOLHTTPResponseSerializer serializer];
+        self.responseSerializer = [AFHTTPResponseSerializer serializer];
     }
     return self;
 }
