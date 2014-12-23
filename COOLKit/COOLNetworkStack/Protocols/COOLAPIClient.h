@@ -22,4 +22,7 @@
                                       success:(COOLAPIClientSuccessBlock)success
                                       failure:(COOLAPIClientFailureBlock)failure;
 
+- (id<COOLAPIRequestSerialization>)requestSerializer;
+- (id<COOLAPIResponseSerialization>)responseSerializer;
+
 @end
