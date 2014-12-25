@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		096AF4701A4CA984003742AB /* COOLLoadableContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 096AF46F1A4CA984003742AB /* COOLLoadableContentViewController.m */; };
+		096AF4731A4CA996003742AB /* COOLLoadableContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 096AF4721A4CA996003742AB /* COOLLoadableContentView.m */; };
 		09EF1CFC1A3626550045DFFE /* libCOOLKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 09EF1CF01A3626550045DFFE /* libCOOLKit.a */; };
 		09EF1D5B1A3627080045DFFE /* NSArray+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EF1D0E1A3627080045DFFE /* NSArray+Extensions.m */; };
 		09EF1D5C1A3627080045DFFE /* COOLComposition.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EF1D101A3627080045DFFE /* COOLComposition.m */; };
@@ -58,6 +60,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		096AF46E1A4CA984003742AB /* COOLLoadableContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COOLLoadableContentViewController.h; sourceTree = "<group>"; };
+		096AF46F1A4CA984003742AB /* COOLLoadableContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COOLLoadableContentViewController.m; sourceTree = "<group>"; };
+		096AF4711A4CA996003742AB /* COOLLoadableContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COOLLoadableContentView.h; sourceTree = "<group>"; };
+		096AF4721A4CA996003742AB /* COOLLoadableContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COOLLoadableContentView.m; sourceTree = "<group>"; };
 		09EF1CF01A3626550045DFFE /* libCOOLKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCOOLKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		09EF1CFB1A3626550045DFFE /* COOLKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = COOLKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		09EF1D011A3626550045DFFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -152,6 +158,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		096AF46D1A4CA93D003742AB /* COOLUI */ = {
+			isa = PBXGroup;
+			children = (
+				096AF46E1A4CA984003742AB /* COOLLoadableContentViewController.h */,
+				096AF46F1A4CA984003742AB /* COOLLoadableContentViewController.m */,
+				096AF4711A4CA996003742AB /* COOLLoadableContentView.h */,
+				096AF4721A4CA996003742AB /* COOLLoadableContentView.m */,
+			);
+			path = COOLUI;
+			sourceTree = "<group>";
+		};
 		09EF1CE71A3626550045DFFE = {
 			isa = PBXGroup;
 			children = (
@@ -176,6 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				09EF1D991A37AF3A0045DFFE /* COOLKit.h */,
+				096AF46D1A4CA93D003742AB /* COOLUI */,
 				09EF1D0A1A3627080045DFFE /* COOLCompositions */,
 				09EF1D141A3627080045DFFE /* COOLDataSources */,
 				09EF1D251A3627080045DFFE /* COOLStateMachines */,
@@ -198,7 +216,7 @@
 			children = (
 				09EF1D011A3626550045DFFE /* Info.plist */,
 			);
-			name = "Supporting Files";
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		09EF1D0A1A3627080045DFFE /* COOLCompositions */ = {
@@ -544,10 +562,12 @@
 				09EF1D8D1A3790FB0045DFFE /* COOLWrapper.m in Sources */,
 				09EF1D981A3793660045DFFE /* COOLListViewDecorator.m in Sources */,
 				09EF1D731A3627080045DFFE /* COOLNetworkActivityLoggerImpl.m in Sources */,
+				096AF4701A4CA984003742AB /* COOLLoadableContentViewController.m in Sources */,
 				09EF1D611A3627080045DFFE /* COOLDataSource.m in Sources */,
 				09EF1D6D1A3627080045DFFE /* AFHTTPRequestSerializer+COOLAPIRequestSerialization.m in Sources */,
 				09EF1D5F1A3627080045DFFE /* COOLAPIClientDataSource.m in Sources */,
 				09EF1D5E1A3627080045DFFE /* NSString+Extensions.m in Sources */,
+				096AF4731A4CA996003742AB /* COOLLoadableContentView.m in Sources */,
 				09EF1D631A3627080045DFFE /* COOLSwitchDataSource.m in Sources */,
 				09EF1D651A3627080045DFFE /* COOLStateMachine.m in Sources */,
 				C3BE92971A48988600038684 /* AFHTTPResponseSerializer+COOLAPIResponseSerialization.m in Sources */,

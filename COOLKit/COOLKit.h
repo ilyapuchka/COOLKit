@@ -13,5 +13,6 @@
 #import "COOLDataSources.h"
 #import "COOLDecorators.h"
 #import "COOLNetworkStack.h"
+#import "COOLLoadableContentViewController.h"
 
 #endif

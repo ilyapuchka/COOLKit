@@ -42,5 +42,10 @@ COOL application components. Contains compositions, data sources, network stack 
     dec.public_header_files = 'COOLKit/COOLDecorators/Public/**/*.h'
     dec.dependency 'COOLKit/Compositions'
   end
+
+  s.subspec 'UI' do |ui|
+    ui.source_files = "COOLKit/COOLUI/**/*.{h,m}"
+    ui.dependency 'COOLKit/DataSources'
+  end
   
 end
