@@ -276,8 +276,7 @@
 				09EF1D281A3627080045DFFE /* COOLStateMachine.h */,
 				09EF1D291A3627080045DFFE /* COOLStateMachine.m */,
 			);
-			name = COOLStateMachines;
-			path = "COOLDataSources/State Machines";
+			path = COOLStateMachines;
 			sourceTree = "<group>";
 		};
 		09EF1D2A1A3627080045DFFE /* COOLDecorators */ = {

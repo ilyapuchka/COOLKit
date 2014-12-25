@@ -8,26 +8,18 @@
 
 #import "COOLLoadingStateMachine.h"
 
-NSString * const COOLLoadingStateInitial = @"Initial";
-NSString * const COOLLoadingStateLoadingContent = @"LoadingState";
-NSString * const COOLLoadingStateRefreshingContent = @"RefreshingState";
-NSString * const COOLLoadingStateContentLoaded = @"LoadedState";
-NSString * const COOLLoadingStateNoContent = @"NoContentState";
-NSString * const COOLLoadingStateError = @"ErrorState";
-NSString * const COOLLoadingStateCancelled = @"CancelledState";
-
 @implementation COOLLoadingStateMachine
 
 - (instancetype)init
 {
     NSDictionary *validTransitions = @{
                                        COOLLoadingStateInitial : @[COOLLoadingStateLoadingContent],
-                                       COOLLoadingStateLoadingContent : @[COOLLoadingStateContentLoaded, COOLLoadingStateNoContent, COOLLoadingStateError, COOLLoadingStateCancelled],
-                                       COOLLoadingStateRefreshingContent : @[COOLLoadingStateContentLoaded, COOLLoadingStateNoContent, COOLLoadingStateError, COOLLoadingStateCancelled],
+                                       COOLLoadingStateLoadingContent : @[COOLLoadingStateContentLoaded, COOLLoadingStateNoContent, COOLLoadingStateError, /*COOLLoadingStateCancelled*/],
+                                       COOLLoadingStateRefreshingContent : @[COOLLoadingStateContentLoaded, COOLLoadingStateNoContent, COOLLoadingStateError, /*COOLLoadingStateCancelled*/],
                                        COOLLoadingStateContentLoaded : @[COOLLoadingStateRefreshingContent],
                                        COOLLoadingStateNoContent : @[COOLLoadingStateLoadingContent, COOLLoadingStateRefreshingContent],
                                        COOLLoadingStateError : @[COOLLoadingStateLoadingContent, COOLLoadingStateRefreshingContent],
-                                       COOLLoadingStateCancelled: @[COOLLoadingStateLoadingContent, COOLLoadingStateRefreshingContent]
+                                       /*COOLLoadingStateCancelled: @[COOLLoadingStateLoadingContent, COOLLoadingStateRefreshingContent]*/
                                        };
     
     self = [super initWithValidTransitions:validTransitions];

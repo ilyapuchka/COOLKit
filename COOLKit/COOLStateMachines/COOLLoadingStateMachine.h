@@ -9,24 +9,24 @@
 #import "COOLStateMachine.h"
 
 /// The initial state.
-extern NSString *const COOLLoadingStateInitial;
+static NSString *const COOLLoadingStateInitial = @"Initial";
 
 /// The first load of content.
-extern NSString *const COOLLoadingStateLoadingContent;
+static NSString *const COOLLoadingStateLoadingContent = @"LoadingState";
 
 /// Subsequent loads after the first.
-extern NSString *const COOLLoadingStateRefreshingContent;
+static NSString *const COOLLoadingStateRefreshingContent = @"RefreshingState";
 
 /// After content is loaded successfully.
-extern NSString *const COOLLoadingStateContentLoaded;
+static NSString *const COOLLoadingStateContentLoaded = @"LoadedState";
 
 /// No content is available.
-extern NSString *const COOLLoadingStateNoContent;
+static NSString *const COOLLoadingStateNoContent = @"NoContentState";
 
 /// An error occurred while loading content.
-extern NSString *const COOLLoadingStateError;
+static NSString *const COOLLoadingStateError = @"ErrorState";
 
-extern NSString * const COOLLoadingStateCancelled;
+//static NSString * const COOLLoadingStateCancelled= @"CancelledState";
 
 @interface COOLLoadingStateMachine : COOLStateMachine
 

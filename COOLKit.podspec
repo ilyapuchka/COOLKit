@@ -26,10 +26,15 @@ COOL application components. Contains compositions, data sources, network stack 
     ns.dependency 'AFNetworkActivityLogger', '~>2.0.0'
   end
 
+  s.subspec 'StateMachines' do |sm|
+    sm.source_files = "COOLKit/COOLStateMachines/**/*.{h,m}"
+  end
+
   s.subspec 'DataSources' do |ds|
     ds.source_files = "COOLKit/COOLDataSources/**/*.{h,m}"
     ds.dependency 'COOLKit/Compositions'
     ds.dependency 'COOLKit/NetworkStack'
+    ds.dependency 'COOLKit/StateMachines'
   end
 
   s.subspec 'Decorators' do |dec|

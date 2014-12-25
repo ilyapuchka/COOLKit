@@ -13,9 +13,6 @@
 
 #import "NSString+Extensions.h"
 
-static NSString * const COOLStateNil = @"Nil";
-NSString *const COOLStateUndefined = @"UndefinedState";
-
 @interface COOLStateMachine()
 
 @property (retain, atomic) NSDictionary *validTransitions;

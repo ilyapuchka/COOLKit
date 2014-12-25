@@ -15,10 +15,13 @@
 
 @protocol COOLStateMachineDelegate;
 
+static NSString * const COOLStateNil = @"Nil";
+
 /**
  *  Special state to forse calling missingTransitionFromState:toState on delegate
  */
-extern NSString *const COOLStateUndefined;
+static NSString *const COOLStateUndefined = @"UndefinedState";
+
 
 /**
  *   A general purpose state machine implementation. The state machine will call methods on the delegate based on the name of the state. For example, when transitioning from StateA to StateB, the state machine will first call -shouldEnterStateA. If that method isn't implemented or returns YES, the state machine calls -willExitStateA followed by -willEnterStateB, then if implemented, it will call -stateWillChangeFromStateAToStateB or otherwise -stateWillChange, and updates the current state. It then calls -didExitStateA followed by -didEnterStateB. Finally, if implemented, it will call -stateDidChangeFromStateAToStateB or otherwise -stateDidChange. Target of all this calls will be delegate or state machine itself if delegate is nil.
