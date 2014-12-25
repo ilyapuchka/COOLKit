@@ -15,6 +15,7 @@
 @interface COOLLoadingProcess()
 
 @property (nonatomic, copy) void (^completionBlock)(NSString *, NSError *, COOLLoadingProcessDoneBlock);
+@property (nonatomic, copy) NSString *initialState;
 
 @end
 
@@ -25,12 +26,13 @@
 }
 #endif
 
-+ (instancetype)loadingProcessWithCompletionHandler:(void (^)(NSString *, NSError *, COOLLoadingProcessDoneBlock))handler
++ (instancetype)loadingProcessWithCompletionHandler:(void (^)(NSString *, NSError *, COOLLoadingProcessDoneBlock))handler initialState:(NSString *)initialState
 {
     NSParameterAssert(handler != nil);
     COOLLoadingProcess *loading = [[self alloc] init];
     loading.completionBlock = handler;
     loading.current = YES;
+    loading.initialState = initialState;
     return loading;
 }
 
@@ -102,7 +104,7 @@
 - (void)cancelLoading
 {
     self.cancelled = YES;
-    [self _doneWithNewState:COOLLoadingStateCancelled error:nil update:nil];
+    [self _doneWithNewState:self.initialState error:nil update:nil];
 }
 
 @end

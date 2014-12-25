@@ -118,10 +118,13 @@ typedef void (^COOLLoadingBlock)(COOLLoadingProcess *loadingProcess);
 - (void)loadContentWithBlock:(COOLLoadingBlock)block;
 
 /**
- *  Reset loading state. Subclasses should call super and should reset any content information they currently hold.
+ *  Reset loading state to initial state. Subclasses should call super and should reset any content information they currently hold.
  */
 - (void)resetContent NS_REQUIRES_SUPER;
 
+/**
+ *  Reset loading state to state before loading and cancels loading process.
+ */
 - (void)cancelLoading NS_REQUIRES_SUPER;
 
 @end

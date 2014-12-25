@@ -116,6 +116,7 @@
 
 - (void)loadContentWithBlock:(COOLLoadingBlock)block
 {
+    NSString *beforeLoadinState = self.loadingState;
     [self beginLoading];
     
     __weak typeof(self) weakself = self;
@@ -130,7 +131,7 @@
             if (update && me)
                 update(me);
         }];
-    }];
+    } initialState:beforeLoadinState];
     
     self.loadingProcess.current = NO;
     self.loadingProcess = loadingProcess;

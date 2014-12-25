@@ -29,7 +29,7 @@ typedef void (^COOLLoadingProcessDoneBlock)(COOLDataSource *me);
  *
  *  @return
  */
-+ (instancetype)loadingProcessWithCompletionHandler:(void(^)(NSString *state, NSError *error, COOLLoadingProcessDoneBlock update))handler;
++ (instancetype)loadingProcessWithCompletionHandler:(void(^)(NSString *state, NSError *error, COOLLoadingProcessDoneBlock update))handler initialState:(NSString *)initialState;
 
 /**
  *  Signals that this result should be ignored. Sends a nil value for the state to the completion handler.
@@ -70,6 +70,9 @@ typedef void (^COOLLoadingProcessDoneBlock)(COOLDataSource *me);
  */
 - (void)doneWithNoContent:(COOLLoadingProcessDoneBlock)block;
 
+/**
+ *  Signals that loading was canceled, transitions to initial state.
+ */
 - (void)cancelLoading;
 
 @property (nonatomic, getter=isCurrent) BOOL current;
