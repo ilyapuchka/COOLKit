@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "COOLKit"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "COOL application components."
 
   s.description  = <<-DESC
@@ -11,7 +11,7 @@ COOL application components. Contains compositions, data sources, network stack 
   s.license      = "MIT"
   s.author       = { "Ilya Puchka" => "ilya@puchka.me" }
   s.platform     = :ios, "7.0"
-  s.source       = { :git => "git@github.com:ilyapuchka/COOLKit.git", :tag => "0.0.1" }
+  s.source       = { :git => "git@github.com:ilyapuchka/COOLKit.git", :tag => s.version.to_s }
   s.requires_arc = true
 
   s.source_files = "COOLKit/COOLKit.h"
