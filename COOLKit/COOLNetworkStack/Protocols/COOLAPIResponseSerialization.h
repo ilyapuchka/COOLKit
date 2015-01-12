@@ -13,6 +13,13 @@
 
 @protocol COOLAPIResponseSerialization <AFURLResponseSerialization>
 
+- (instancetype)initWithResponsesRegisteredForRequests:(NSDictionary *)responsesRegisteredForRequests;
+
+- (NSDictionary *)responsesRegisteredForRequests;
+
+- (void)registerAPIResponseClass:(Class)apiResponseClass
+              forAPIRequestClass:(Class)apiRequestClass;
+
 - (id<COOLAPIResponse>)responseForRequest:(COOLAPIRequest *)request
                                      task:(NSURLSessionDataTask *)task
                              httpResponse:(NSHTTPURLResponse *)httpResponse

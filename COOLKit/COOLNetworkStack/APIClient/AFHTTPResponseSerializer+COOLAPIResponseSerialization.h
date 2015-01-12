@@ -11,11 +11,4 @@
 
 @interface AFHTTPResponseSerializer (COOLAPIResponseSerialization) <COOLAPIResponseSerialization>
 
-- (NSDictionary *)responsesRegisteredForRequests;
-
-- (instancetype)initWithResponsesRegisteredForRequests:(NSDictionary *)responsesRegisteredForRequests;
-
-- (void)registerAPIResponseClass:(Class)apiResponseClass
-              forAPIRequestClass:(Class)apiRequestClass;
-
 @end
