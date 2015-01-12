@@ -1,5 +1,5 @@
 //
-//  COOLTableViewDelegatingWrapper.h
+//  COOLTableViewDelegationDecorator.h
 //  COOLDecorators
 //
 //  Created by Ilya Puchka on 15.11.14.
@@ -10,11 +10,9 @@
 #import "COOLTableViewDisplayDataSource.h"
 #import "COOLTableViewEventsResponder.h"
 #import "COOLTableViewEditingDelegate.h"
+#import "COOLTableViewDataSourceDelegate.h"
 
-@protocol UITableViewDataSourceDelegate <UITableViewDataSource, UITableViewDelegate>
-@end
-
-@interface COOLTableViewDelegatingWrapper : NSObject <UITableViewDataSourceDelegate>
+@interface COOLTableViewDelegationDecorator : NSObject <COOLTableViewDataSourceDelegate, COOLTableViewDisplayDataSource>
 
 @property (nonatomic, strong) IBOutlet id<COOLTableViewDisplayDataSource> displayDataSource;
 @property (nonatomic, strong) IBOutlet id<COOLTableViewEventsResponder> eventsResponder;

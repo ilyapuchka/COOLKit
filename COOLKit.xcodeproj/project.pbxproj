@@ -7,8 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0907EFFE1A573CCA0036F0AF /* UITableView+Decoration.m in Sources */ = {isa = PBXBuildFile; fileRef = 0907EFFD1A573CCA0036F0AF /* UITableView+Decoration.m */; };
 		096AF4701A4CA984003742AB /* COOLLoadableContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 096AF46F1A4CA984003742AB /* COOLLoadableContentViewController.m */; };
 		096AF4731A4CA996003742AB /* COOLLoadableContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 096AF4721A4CA996003742AB /* COOLLoadableContentView.m */; };
+		09BFBEF31A5578A800823CAB /* COOLWrappedTableViewDataSourceDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BFBEF21A5578A800823CAB /* COOLWrappedTableViewDataSourceDelegate.m */; };
+		09BFBEF81A56C49500823CAB /* COOLInjectedTableViewDataSourceDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BFBEF71A56C49500823CAB /* COOLInjectedTableViewDataSourceDelegate.m */; };
+		09BFBEFC1A56C87100823CAB /* COOLTableViewWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BFBEFA1A56C87100823CAB /* COOLTableViewWrapper.m */; };
+		09BFBEFE1A56C87A00823CAB /* COOLWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BFBEFD1A56C87A00823CAB /* COOLWrapper.m */; };
+		09BFBF071A56C89900823CAB /* COOLComposedIndexPathsMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BFBF021A56C89900823CAB /* COOLComposedIndexPathsMapping.m */; };
+		09BFBF081A56C89900823CAB /* COOLInjecedtIndexPathsMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BFBF051A56C89900823CAB /* COOLInjecedtIndexPathsMapping.m */; };
+		09BFBF0C1A56C8F000823CAB /* COOLInjectedTableViewDataSourceDecorator.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BFBEE81A55531500823CAB /* COOLInjectedTableViewDataSourceDecorator.m */; };
+		09BFBF0F1A56D1F100823CAB /* COOLDataSourceDelegateViewDecorator.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BFBF0E1A56D1F100823CAB /* COOLDataSourceDelegateViewDecorator.m */; };
 		09EF1CFC1A3626550045DFFE /* libCOOLKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 09EF1CF01A3626550045DFFE /* libCOOLKit.a */; };
 		09EF1D5B1A3627080045DFFE /* NSArray+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EF1D0E1A3627080045DFFE /* NSArray+Extensions.m */; };
 		09EF1D5C1A3627080045DFFE /* COOLComposition.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EF1D101A3627080045DFFE /* COOLComposition.m */; };
@@ -26,12 +35,8 @@
 		09EF1D701A3627080045DFFE /* COOLAPIRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EF1D491A3627080045DFFE /* COOLAPIRequest.m */; };
 		09EF1D711A3627080045DFFE /* COOLAPIResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EF1D4C1A3627080045DFFE /* COOLAPIResponse.m */; };
 		09EF1D731A3627080045DFFE /* COOLNetworkActivityLoggerImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EF1D531A3627080045DFFE /* COOLNetworkActivityLoggerImpl.m */; };
-		09EF1D8A1A3790FB0045DFFE /* COOLCollectionViewWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EF1D771A3790FB0045DFFE /* COOLCollectionViewWrapper.m */; };
-		09EF1D8B1A3790FB0045DFFE /* COOLIndexPathsMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EF1D791A3790FB0045DFFE /* COOLIndexPathsMapping.m */; };
-		09EF1D8C1A3790FB0045DFFE /* COOLTableViewWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EF1D7B1A3790FB0045DFFE /* COOLTableViewWrapper.m */; };
-		09EF1D8D1A3790FB0045DFFE /* COOLWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EF1D7D1A3790FB0045DFFE /* COOLWrapper.m */; };
-		09EF1D8E1A3790FB0045DFFE /* COOLComposedTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EF1D801A3790FB0045DFFE /* COOLComposedTableViewDataSource.m */; };
-		09EF1D901A3790FB0045DFFE /* COOLTableViewDelegatingWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EF1D851A3790FB0045DFFE /* COOLTableViewDelegatingWrapper.m */; };
+		09EF1D8E1A3790FB0045DFFE /* COOLComposedTableViewDataSourceDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EF1D801A3790FB0045DFFE /* COOLComposedTableViewDataSourceDelegate.m */; };
+		09EF1D901A3790FB0045DFFE /* COOLTableViewDelegationDecorator.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EF1D851A3790FB0045DFFE /* COOLTableViewDelegationDecorator.m */; };
 		09EF1D981A3793660045DFFE /* COOLListViewDecorator.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EF1D971A3793660045DFFE /* COOLListViewDecorator.m */; };
 		94FDD26C979888F331CAB11C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F133CAF0072657D852B9CDCF /* libPods.a */; };
 		C3BE92971A48988600038684 /* AFHTTPResponseSerializer+COOLAPIResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = C3BE92961A48988600038684 /* AFHTTPResponseSerializer+COOLAPIResponseSerialization.m */; };
@@ -60,10 +65,30 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0907EFFC1A573CCA0036F0AF /* UITableView+Decoration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+Decoration.h"; sourceTree = "<group>"; };
+		0907EFFD1A573CCA0036F0AF /* UITableView+Decoration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+Decoration.m"; sourceTree = "<group>"; };
 		096AF46E1A4CA984003742AB /* COOLLoadableContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COOLLoadableContentViewController.h; sourceTree = "<group>"; };
 		096AF46F1A4CA984003742AB /* COOLLoadableContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COOLLoadableContentViewController.m; sourceTree = "<group>"; };
 		096AF4711A4CA996003742AB /* COOLLoadableContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COOLLoadableContentView.h; sourceTree = "<group>"; };
 		096AF4721A4CA996003742AB /* COOLLoadableContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COOLLoadableContentView.m; sourceTree = "<group>"; };
+		09BFBEE71A55531500823CAB /* COOLInjectedTableViewDataSourceDecorator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COOLInjectedTableViewDataSourceDecorator.h; sourceTree = "<group>"; };
+		09BFBEE81A55531500823CAB /* COOLInjectedTableViewDataSourceDecorator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COOLInjectedTableViewDataSourceDecorator.m; sourceTree = "<group>"; };
+		09BFBEEA1A55535500823CAB /* COOLTableViewDataSourceDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COOLTableViewDataSourceDelegate.h; sourceTree = "<group>"; };
+		09BFBEF11A5578A800823CAB /* COOLWrappedTableViewDataSourceDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COOLWrappedTableViewDataSourceDelegate.h; sourceTree = "<group>"; };
+		09BFBEF21A5578A800823CAB /* COOLWrappedTableViewDataSourceDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COOLWrappedTableViewDataSourceDelegate.m; sourceTree = "<group>"; };
+		09BFBEF61A56C49500823CAB /* COOLInjectedTableViewDataSourceDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COOLInjectedTableViewDataSourceDelegate.h; sourceTree = "<group>"; };
+		09BFBEF71A56C49500823CAB /* COOLInjectedTableViewDataSourceDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COOLInjectedTableViewDataSourceDelegate.m; sourceTree = "<group>"; };
+		09BFBEF91A56C87100823CAB /* COOLTableViewWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COOLTableViewWrapper.h; sourceTree = "<group>"; };
+		09BFBEFA1A56C87100823CAB /* COOLTableViewWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COOLTableViewWrapper.m; sourceTree = "<group>"; };
+		09BFBEFB1A56C87100823CAB /* COOLWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COOLWrapper.h; sourceTree = "<group>"; };
+		09BFBEFD1A56C87A00823CAB /* COOLWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COOLWrapper.m; sourceTree = "<group>"; };
+		09BFBF011A56C89900823CAB /* COOLComposedIndexPathsMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COOLComposedIndexPathsMapping.h; sourceTree = "<group>"; };
+		09BFBF021A56C89900823CAB /* COOLComposedIndexPathsMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COOLComposedIndexPathsMapping.m; sourceTree = "<group>"; };
+		09BFBF031A56C89900823CAB /* COOLIndexPathsMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COOLIndexPathsMapping.h; sourceTree = "<group>"; };
+		09BFBF041A56C89900823CAB /* COOLInjecedtIndexPathsMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COOLInjecedtIndexPathsMapping.h; sourceTree = "<group>"; };
+		09BFBF051A56C89900823CAB /* COOLInjecedtIndexPathsMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COOLInjecedtIndexPathsMapping.m; sourceTree = "<group>"; };
+		09BFBF0D1A56D1F100823CAB /* COOLDataSourceDelegateViewDecorator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COOLDataSourceDelegateViewDecorator.h; sourceTree = "<group>"; };
+		09BFBF0E1A56D1F100823CAB /* COOLDataSourceDelegateViewDecorator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COOLDataSourceDelegateViewDecorator.m; sourceTree = "<group>"; };
 		09EF1CF01A3626550045DFFE /* libCOOLKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCOOLKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		09EF1CFB1A3626550045DFFE /* COOLKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = COOLKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		09EF1D011A3626550045DFFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -110,24 +135,15 @@
 		09EF1D591A3627080045DFFE /* COOLMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COOLMapping.h; sourceTree = "<group>"; };
 		09EF1D5A1A3627080045DFFE /* COOLNetworkActivityLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COOLNetworkActivityLogger.h; sourceTree = "<group>"; };
 		09EF1D741A3627270045DFFE /* COOLCompositions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COOLCompositions.h; sourceTree = "<group>"; };
-		09EF1D761A3790FB0045DFFE /* COOLCollectionViewWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COOLCollectionViewWrapper.h; sourceTree = "<group>"; };
-		09EF1D771A3790FB0045DFFE /* COOLCollectionViewWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COOLCollectionViewWrapper.m; sourceTree = "<group>"; };
-		09EF1D781A3790FB0045DFFE /* COOLIndexPathsMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COOLIndexPathsMapping.h; sourceTree = "<group>"; };
-		09EF1D791A3790FB0045DFFE /* COOLIndexPathsMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COOLIndexPathsMapping.m; sourceTree = "<group>"; };
-		09EF1D7A1A3790FB0045DFFE /* COOLTableViewWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COOLTableViewWrapper.h; sourceTree = "<group>"; };
-		09EF1D7B1A3790FB0045DFFE /* COOLTableViewWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COOLTableViewWrapper.m; sourceTree = "<group>"; };
-		09EF1D7C1A3790FB0045DFFE /* COOLWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COOLWrapper.h; sourceTree = "<group>"; };
-		09EF1D7D1A3790FB0045DFFE /* COOLWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COOLWrapper.m; sourceTree = "<group>"; };
-		09EF1D7F1A3790FB0045DFFE /* COOLComposedTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COOLComposedTableViewDataSource.h; sourceTree = "<group>"; };
-		09EF1D801A3790FB0045DFFE /* COOLComposedTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COOLComposedTableViewDataSource.m; sourceTree = "<group>"; };
+		09EF1D7F1A3790FB0045DFFE /* COOLComposedTableViewDataSourceDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COOLComposedTableViewDataSourceDelegate.h; sourceTree = "<group>"; };
+		09EF1D801A3790FB0045DFFE /* COOLComposedTableViewDataSourceDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COOLComposedTableViewDataSourceDelegate.m; sourceTree = "<group>"; };
 		09EF1D811A3790FB0045DFFE /* COOLDecorators.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COOLDecorators.h; sourceTree = "<group>"; };
-		09EF1D841A3790FB0045DFFE /* COOLTableViewDelegatingWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COOLTableViewDelegatingWrapper.h; sourceTree = "<group>"; };
-		09EF1D851A3790FB0045DFFE /* COOLTableViewDelegatingWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COOLTableViewDelegatingWrapper.m; sourceTree = "<group>"; };
+		09EF1D841A3790FB0045DFFE /* COOLTableViewDelegationDecorator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COOLTableViewDelegationDecorator.h; sourceTree = "<group>"; };
+		09EF1D851A3790FB0045DFFE /* COOLTableViewDelegationDecorator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COOLTableViewDelegationDecorator.m; sourceTree = "<group>"; };
 		09EF1D861A3790FB0045DFFE /* COOLTableViewDisplayDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COOLTableViewDisplayDataSource.h; sourceTree = "<group>"; };
 		09EF1D871A3790FB0045DFFE /* COOLTableViewEditingDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COOLTableViewEditingDelegate.h; sourceTree = "<group>"; };
 		09EF1D881A3790FB0045DFFE /* COOLTableViewEventsResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COOLTableViewEventsResponder.h; sourceTree = "<group>"; };
 		09EF1D911A37913F0045DFFE /* COOLTableViewDecorator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COOLTableViewDecorator.h; sourceTree = "<group>"; };
-		09EF1D921A37914F0045DFFE /* COOLCollectionViewDecorator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COOLCollectionViewDecorator.h; sourceTree = "<group>"; };
 		09EF1D961A3793660045DFFE /* COOLListViewDecorator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COOLListViewDecorator.h; sourceTree = "<group>"; };
 		09EF1D971A3793660045DFFE /* COOLListViewDecorator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COOLListViewDecorator.m; sourceTree = "<group>"; };
 		09EF1D991A37AF3A0045DFFE /* COOLKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COOLKit.h; sourceTree = "<group>"; };
@@ -167,6 +183,57 @@
 				096AF4721A4CA996003742AB /* COOLLoadableContentView.m */,
 			);
 			path = COOLUI;
+			sourceTree = "<group>";
+		};
+		09BFBF091A56C89F00823CAB /* Wrappers */ = {
+			isa = PBXGroup;
+			children = (
+				09BFBF0A1A56C8AF00823CAB /* Index Patsh Mapping */,
+				09BFBEF11A5578A800823CAB /* COOLWrappedTableViewDataSourceDelegate.h */,
+				09BFBEF21A5578A800823CAB /* COOLWrappedTableViewDataSourceDelegate.m */,
+				09EF1D7F1A3790FB0045DFFE /* COOLComposedTableViewDataSourceDelegate.h */,
+				09EF1D801A3790FB0045DFFE /* COOLComposedTableViewDataSourceDelegate.m */,
+				09BFBEF61A56C49500823CAB /* COOLInjectedTableViewDataSourceDelegate.h */,
+				09BFBEF71A56C49500823CAB /* COOLInjectedTableViewDataSourceDelegate.m */,
+				09BFBEEA1A55535500823CAB /* COOLTableViewDataSourceDelegate.h */,
+				09BFBEFB1A56C87100823CAB /* COOLWrapper.h */,
+				09BFBEFD1A56C87A00823CAB /* COOLWrapper.m */,
+				09BFBEF91A56C87100823CAB /* COOLTableViewWrapper.h */,
+				09BFBEFA1A56C87100823CAB /* COOLTableViewWrapper.m */,
+			);
+			path = Wrappers;
+			sourceTree = "<group>";
+		};
+		09BFBF0A1A56C8AF00823CAB /* Index Patsh Mapping */ = {
+			isa = PBXGroup;
+			children = (
+				09BFBF011A56C89900823CAB /* COOLComposedIndexPathsMapping.h */,
+				09BFBF021A56C89900823CAB /* COOLComposedIndexPathsMapping.m */,
+				09BFBF031A56C89900823CAB /* COOLIndexPathsMapping.h */,
+				09BFBF041A56C89900823CAB /* COOLInjecedtIndexPathsMapping.h */,
+				09BFBF051A56C89900823CAB /* COOLInjecedtIndexPathsMapping.m */,
+			);
+			path = "Index Patsh Mapping";
+			sourceTree = "<group>";
+		};
+		09BFBF0B1A56C8C100823CAB /* Decorators */ = {
+			isa = PBXGroup;
+			children = (
+				09EF1D811A3790FB0045DFFE /* COOLDecorators.h */,
+				09EF1D961A3793660045DFFE /* COOLListViewDecorator.h */,
+				09EF1D971A3793660045DFFE /* COOLListViewDecorator.m */,
+				09BFBF0D1A56D1F100823CAB /* COOLDataSourceDelegateViewDecorator.h */,
+				09BFBF0E1A56D1F100823CAB /* COOLDataSourceDelegateViewDecorator.m */,
+				09EF1D911A37913F0045DFFE /* COOLTableViewDecorator.h */,
+				09EF1D841A3790FB0045DFFE /* COOLTableViewDelegationDecorator.h */,
+				09EF1D851A3790FB0045DFFE /* COOLTableViewDelegationDecorator.m */,
+				09EF1D861A3790FB0045DFFE /* COOLTableViewDisplayDataSource.h */,
+				09EF1D871A3790FB0045DFFE /* COOLTableViewEditingDelegate.h */,
+				09EF1D881A3790FB0045DFFE /* COOLTableViewEventsResponder.h */,
+				09BFBEE71A55531500823CAB /* COOLInjectedTableViewDataSourceDecorator.h */,
+				09BFBEE81A55531500823CAB /* COOLInjectedTableViewDataSourceDecorator.m */,
+			);
+			path = Decorators;
 			sourceTree = "<group>";
 		};
 		09EF1CE71A3626550045DFFE = {
@@ -300,8 +367,9 @@
 		09EF1D2A1A3627080045DFFE /* COOLDecorators */ = {
 			isa = PBXGroup;
 			children = (
-				09EF1D751A3790FB0045DFFE /* Private */,
-				09EF1D7E1A3790FB0045DFFE /* Public */,
+				09BFBF0B1A56C8C100823CAB /* Decorators */,
+				09BFBF091A56C89F00823CAB /* Wrappers */,
+				09EF1D751A3790FB0045DFFE /* Categories */,
 			);
 			path = COOLDecorators;
 			sourceTree = "<group>";
@@ -373,38 +441,13 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
-		09EF1D751A3790FB0045DFFE /* Private */ = {
+		09EF1D751A3790FB0045DFFE /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-				09EF1D761A3790FB0045DFFE /* COOLCollectionViewWrapper.h */,
-				09EF1D771A3790FB0045DFFE /* COOLCollectionViewWrapper.m */,
-				09EF1D781A3790FB0045DFFE /* COOLIndexPathsMapping.h */,
-				09EF1D791A3790FB0045DFFE /* COOLIndexPathsMapping.m */,
-				09EF1D7A1A3790FB0045DFFE /* COOLTableViewWrapper.h */,
-				09EF1D7B1A3790FB0045DFFE /* COOLTableViewWrapper.m */,
-				09EF1D7C1A3790FB0045DFFE /* COOLWrapper.h */,
-				09EF1D7D1A3790FB0045DFFE /* COOLWrapper.m */,
+				0907EFFC1A573CCA0036F0AF /* UITableView+Decoration.h */,
+				0907EFFD1A573CCA0036F0AF /* UITableView+Decoration.m */,
 			);
-			path = Private;
-			sourceTree = "<group>";
-		};
-		09EF1D7E1A3790FB0045DFFE /* Public */ = {
-			isa = PBXGroup;
-			children = (
-				09EF1D7F1A3790FB0045DFFE /* COOLComposedTableViewDataSource.h */,
-				09EF1D801A3790FB0045DFFE /* COOLComposedTableViewDataSource.m */,
-				09EF1D811A3790FB0045DFFE /* COOLDecorators.h */,
-				09EF1D961A3793660045DFFE /* COOLListViewDecorator.h */,
-				09EF1D971A3793660045DFFE /* COOLListViewDecorator.m */,
-				09EF1D911A37913F0045DFFE /* COOLTableViewDecorator.h */,
-				09EF1D921A37914F0045DFFE /* COOLCollectionViewDecorator.h */,
-				09EF1D841A3790FB0045DFFE /* COOLTableViewDelegatingWrapper.h */,
-				09EF1D851A3790FB0045DFFE /* COOLTableViewDelegatingWrapper.m */,
-				09EF1D861A3790FB0045DFFE /* COOLTableViewDisplayDataSource.h */,
-				09EF1D871A3790FB0045DFFE /* COOLTableViewEditingDelegate.h */,
-				09EF1D881A3790FB0045DFFE /* COOLTableViewEventsResponder.h */,
-			);
-			path = Public;
+			path = Categories;
 			sourceTree = "<group>";
 		};
 		7384BD541050D3D836FD7E6C /* Pods */ = {
@@ -547,19 +590,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09EF1D901A3790FB0045DFFE /* COOLTableViewDelegatingWrapper.m in Sources */,
+				09EF1D901A3790FB0045DFFE /* COOLTableViewDelegationDecorator.m in Sources */,
+				09BFBF071A56C89900823CAB /* COOLComposedIndexPathsMapping.m in Sources */,
+				0907EFFE1A573CCA0036F0AF /* UITableView+Decoration.m in Sources */,
 				09EF1D711A3627080045DFFE /* COOLAPIResponse.m in Sources */,
-				09EF1D8C1A3790FB0045DFFE /* COOLTableViewWrapper.m in Sources */,
+				09BFBF081A56C89900823CAB /* COOLInjecedtIndexPathsMapping.m in Sources */,
+				09BFBEFC1A56C87100823CAB /* COOLTableViewWrapper.m in Sources */,
 				09EF1D5B1A3627080045DFFE /* NSArray+Extensions.m in Sources */,
 				09EF1D6E1A3627080045DFFE /* COOLAPIClientImpl.m in Sources */,
-				09EF1D8E1A3790FB0045DFFE /* COOLComposedTableViewDataSource.m in Sources */,
+				09EF1D8E1A3790FB0045DFFE /* COOLComposedTableViewDataSourceDelegate.m in Sources */,
 				09EF1D621A3627080045DFFE /* COOLLoadingProcess.m in Sources */,
 				09EF1D701A3627080045DFFE /* COOLAPIRequest.m in Sources */,
-				09EF1D8B1A3790FB0045DFFE /* COOLIndexPathsMapping.m in Sources */,
+				09BFBEF81A56C49500823CAB /* COOLInjectedTableViewDataSourceDelegate.m in Sources */,
 				09EF1D5C1A3627080045DFFE /* COOLComposition.m in Sources */,
+				09BFBF0C1A56C8F000823CAB /* COOLInjectedTableViewDataSourceDecorator.m in Sources */,
 				09EF1D5D1A3627080045DFFE /* COOLSwitchComposition.m in Sources */,
+				09BFBEFE1A56C87A00823CAB /* COOLWrapper.m in Sources */,
+				09BFBF0F1A56D1F100823CAB /* COOLDataSourceDelegateViewDecorator.m in Sources */,
 				09EF1D601A3627080045DFFE /* COOLComposedDataSource.m in Sources */,
-				09EF1D8D1A3790FB0045DFFE /* COOLWrapper.m in Sources */,
 				09EF1D981A3793660045DFFE /* COOLListViewDecorator.m in Sources */,
 				09EF1D731A3627080045DFFE /* COOLNetworkActivityLoggerImpl.m in Sources */,
 				096AF4701A4CA984003742AB /* COOLLoadableContentViewController.m in Sources */,
@@ -568,11 +616,11 @@
 				09EF1D5F1A3627080045DFFE /* COOLAPIClientDataSource.m in Sources */,
 				09EF1D5E1A3627080045DFFE /* NSString+Extensions.m in Sources */,
 				096AF4731A4CA996003742AB /* COOLLoadableContentView.m in Sources */,
+				09BFBEF31A5578A800823CAB /* COOLWrappedTableViewDataSourceDelegate.m in Sources */,
 				09EF1D631A3627080045DFFE /* COOLSwitchDataSource.m in Sources */,
 				09EF1D651A3627080045DFFE /* COOLStateMachine.m in Sources */,
 				C3BE92971A48988600038684 /* AFHTTPResponseSerializer+COOLAPIResponseSerialization.m in Sources */,
 				09EF1D641A3627080045DFFE /* COOLLoadingStateMachine.m in Sources */,
-				09EF1D8A1A3790FB0045DFFE /* COOLCollectionViewWrapper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

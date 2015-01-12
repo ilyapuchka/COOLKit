@@ -14,7 +14,11 @@
 }
 
 + (instancetype)wrapperFor:(NSObject *)object;
-+ (Class)wrappedClass;
+- (void)unwrap;
+
 - (NSObject *)wrappedObject;
+
+//subclasses should override this method
++ (Class)wrappedClass;
 
 @end

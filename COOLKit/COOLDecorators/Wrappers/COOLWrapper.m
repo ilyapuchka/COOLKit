@@ -45,6 +45,14 @@
     return [NSObject class];
 }
 
+- (void)unwrap
+{
+    if (_wrappedObject != nil) {
+        [self releaseLifetimeFromObject:_wrappedObject];
+        _wrappedObject = nil;
+    }
+}
+
 #pragma mark - Private
 
 - (void)bindLifetimeToObject:(id)object

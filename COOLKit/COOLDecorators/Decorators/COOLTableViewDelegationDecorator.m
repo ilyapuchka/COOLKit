@@ -1,21 +1,21 @@
 //
-//  COOLTableViewDelegatingWrapper.m
+//  COOLTableViewDelegationDecorator.m
 //  COOLDecorators
 //
 //  Created by Ilya Puchka on 15.11.14.
 //  Copyright (c) 2014 Ilya Puchka. All rights reserved.
 //
 
-#import "COOLTableViewDelegatingWrapper.h"
+#import "COOLTableViewDelegationDecorator.h"
 #import "COOLComposition.h"
 
-@interface COOLTableViewDelegatingWrapper()
+@interface COOLTableViewDelegationDecorator()
 
 @property (nonatomic, strong) COOLComposition *composition;
 
 @end
 
-@implementation COOLTableViewDelegatingWrapper
+@implementation COOLTableViewDelegationDecorator
 
 @synthesize displayDataSource = _displayDataSource;
 @synthesize eventsResponder = _eventsResponder;
@@ -68,6 +68,8 @@
 {
     return [self.displayDataSource tableView:tableView cellForRowAtIndexPath:indexPath];
 }
+
+#pragma mark - Invocation forwarding
 
 - (id)forwardingTargetForSelector:(SEL)aSelector
 {

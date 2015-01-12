@@ -39,7 +39,7 @@ COOL application components. Contains compositions, data sources, network stack 
 
   s.subspec 'Decorators' do |dec|
     dec.source_files = "COOLKit/COOLDecorators/**/*.{h,m}"
-    dec.public_header_files = 'COOLKit/COOLDecorators/Public/**/*.h'
+    dec.public_header_files = 'COOLKit/COOLDecorators/**/*.h'
     dec.dependency 'COOLKit/Compositions'
   end
 

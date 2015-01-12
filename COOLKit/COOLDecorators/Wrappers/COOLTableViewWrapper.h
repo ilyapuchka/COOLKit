@@ -13,7 +13,7 @@
 
 + (instancetype)wrapperFor:(UITableView *)view;
 
-@property (nonatomic, strong) COOLIndexPathsMapping *indexPathsMapping;
+@property (nonatomic, strong) id<COOLIndexPathsMapping> indexPathsMapping;
 
 - (UITableView *)wrappedObject;
 - (UITableView *)tableView;

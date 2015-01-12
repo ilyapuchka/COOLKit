@@ -7,3 +7,4 @@
 //
 
 #import "COOLListViewDecorator.h"
+#import "COOLInjectedTableViewDataSourceDecorator.h"

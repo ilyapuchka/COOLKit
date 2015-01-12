@@ -7,13 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "COOLTableViewDataSourceDelegate.h"
+#import "UITableView+Decoration.h"
 
-@protocol COOLTableViewDecorator <NSObject, UITableViewDelegate, UITableViewDataSource>
+@protocol COOLTableViewDecorator <COOLTableViewDataSourceDelegate>
 
 - (void)decorateView:(UITableView *)view;
 
 @property (nonatomic, strong, readonly) UITableView *decoratedView;
 @property (nonatomic, weak, readonly) id<UITableViewDataSource> decoratedDataSource;
 @property (nonatomic, weak, readonly) id<UITableViewDelegate> decoratedDelegate;
+
+- (void)beginUpdates;
+- (void)endUpdates;
 
 @end

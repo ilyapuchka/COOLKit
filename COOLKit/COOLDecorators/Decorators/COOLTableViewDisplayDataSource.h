@@ -15,11 +15,11 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section;
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath;
 
-- (void)registerReusableViewsInTableView:(UITableView *)tableView;
-- (id)itemAtIndexPath:(NSIndexPath *)indexPath;
-- (NSArray *)itemsInSection:(NSInteger)section;
-
 @optional
+
+- (void)registerReusableViewsInTableView:(UITableView *)tableView;
+- (id)cellObjectAtIndexPath:(NSIndexPath *)indexPath;
+- (NSArray *)cellObjectsInSection:(NSInteger)section;
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView;
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section;

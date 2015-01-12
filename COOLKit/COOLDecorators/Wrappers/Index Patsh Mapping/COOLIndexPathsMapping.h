@@ -1,16 +1,14 @@
 //
 //  COOLIndexPathsMapping.h
-//  COOLDecorators
+//  COOLKit
 //
-//  Created by Ilya Puchka on 15.11.14.
-//  Copyright (c) 2014 Ilya Puchka. All rights reserved.
+//  Created by Ilya Puchka on 02.01.15.
+//  Copyright (c) 2015 Ilya Puchka. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
-@interface COOLIndexPathsMapping : NSObject
-
-- (instancetype)initWithSectionsCount:(NSInteger)sectionsCount;
+@protocol COOLIndexPathsMapping <NSObject>
 
 - (NSInteger)sectionAfterWrappingForSectionBeforeWrapping:(NSInteger)section;
 - (NSInteger)sectionBeforeWrappingForSectionAfterWrapping:(NSInteger)section;
@@ -25,8 +23,7 @@
 - (NSArray *)indexPathsBeforeWrappingForIndexPathAfterWrapping:(NSArray *)indexPaths;
 
 - (NSInteger)sectionsCount;
-
-//returns new global sections count
-- (NSInteger)updateWithSectionsCount:(NSInteger)sectionsCount startingWithSectionAtIndex:(NSInteger)sectionIndex;
+- (NSInteger)numberOfRowsInSection:(NSInteger)section;
+- (void)setNumberOfRows:(NSInteger)rowsCount inSection:(NSInteger)section;
 
 @end
