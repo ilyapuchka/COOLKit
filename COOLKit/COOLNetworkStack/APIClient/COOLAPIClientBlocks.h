@@ -13,5 +13,6 @@
 
 typedef void(^COOLAPIClientSuccessBlock)(id<COOLAPIResponse> response);
 typedef void(^COOLAPIClientFailureBlock)(id<COOLAPIResponse> response);
+typedef void(^COOLAPIClientCompletionBlock)(BOOL success, id<COOLAPIResponse> response);
 
 #endif

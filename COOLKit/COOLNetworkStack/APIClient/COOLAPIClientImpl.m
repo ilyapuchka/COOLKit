@@ -46,7 +46,7 @@
     [_networkActivityLogger startLogging];
 }
 
-- (NSURLSessionDataTask *)dataTaskWithRequest:(COOLAPIRequest *)request success:(COOLAPIClientSuccessBlock)success failure:(COOLAPIClientFailureBlock)failure
+- (NSURLSessionDataTask *)dataTaskWithAPIRequest:(COOLAPIRequest *)request success:(COOLAPIClientSuccessBlock)success failure:(COOLAPIClientFailureBlock)failure
 {
     NSError *requestBuildError;
     NSURLRequest *httpRequest = [self.requestSerializer requestBySerializingAPIRequest:request basePath:self.baseURL error:&requestBuildError];
@@ -66,6 +66,15 @@
     }];
     [task resume];
     return task;
+}
+
+- (NSURLSessionDataTask *)dataTaskWithAPIRequest:(COOLAPIRequest *)request completionHandler:(COOLAPIClientCompletionBlock)completionHandler
+{
+    return [self dataTaskWithAPIRequest:request success:^(id<COOLAPIResponse> response) {
+        if (completionHandler) completionHandler(YES, response);
+    } failure:^(id<COOLAPIResponse> response) {
+        if (completionHandler) completionHandler(NO, response);
+    }];
 }
 
 @end
