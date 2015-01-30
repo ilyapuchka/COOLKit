@@ -11,6 +11,7 @@
 @interface COOLLoadableContentView()
 
 @property (nonatomic, strong) COOLLoadingStateMachine *stateMachine;
+@property (nonatomic, strong) NSArray *loadingSupplementaryViewConstraints;
 
 @end
 
@@ -26,18 +27,59 @@
     return _stateMachine;
 }
 
-- (UIView<COOLLoadingSupplementaryView> *)loadingSupplementaryView
+- (UIView<COOLLoadingSupplementaryView> *)createLoadingSupplementaryView
 {
-    if (!_loadingSupplementaryView) {
-        UIActivityIndicatorView *activityView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
-        activityView.color = [UIColor lightGrayColor];
-        _loadingSupplementaryView = (UIView<COOLLoadingSupplementaryView> *)activityView;
-        [_loadingSupplementaryView setTranslatesAutoresizingMaskIntoConstraints:NO];
-        [self addSubview:_loadingSupplementaryView];
-        [self addConstraint:[NSLayoutConstraint constraintWithItem:_loadingSupplementaryView attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterX multiplier:1.0f constant:0.0f]];
-        [self addConstraint:[NSLayoutConstraint constraintWithItem:_loadingSupplementaryView attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterY multiplier:1.0f constant:0.0f]];
+    UIView<COOLLoadingSupplementaryView> *loadingView;
+    UIActivityIndicatorView *activityView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+    activityView.color = [UIColor lightGrayColor];
+    loadingView = (UIView<COOLLoadingSupplementaryView> *)activityView;
+    [loadingView setTranslatesAutoresizingMaskIntoConstraints:NO];
+    return loadingView;
+}
+
+- (NSArray *)loadingSupplementaryViewConstraints
+{
+    if (!_loadingSupplementaryViewConstraints) {
+        _loadingSupplementaryViewConstraints = @[];
+        NSLayoutConstraint *constaint = [NSLayoutConstraint constraintWithItem:_loadingSupplementaryView attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterX multiplier:1.0f constant:self.supplementaryViewOffset.x];
+        _loadingSupplementaryViewConstraints = [_loadingSupplementaryViewConstraints arrayByAddingObject:constaint];
+        
+        constaint = [NSLayoutConstraint constraintWithItem:_loadingSupplementaryView attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterY multiplier:1.0f constant:self.supplementaryViewOffset.y];
+        _loadingSupplementaryViewConstraints = [_loadingSupplementaryViewConstraints arrayByAddingObject:constaint];
     }
-    return _loadingSupplementaryView;
+    return _loadingSupplementaryViewConstraints;
+}
+
+- (void)updateLoadingSupplementaryViewConstraints
+{
+    if (self.loadingSupplementaryViewConstraints) {
+        [self removeConstraints:self.loadingSupplementaryViewConstraints];
+        self.loadingSupplementaryViewConstraints = nil;
+    }
+    [self addConstraints:self.loadingSupplementaryViewConstraints];
+}
+
+- (void)setSupplementaryViewOffset:(CGPoint)supplementaryViewOffset
+{
+    _supplementaryViewOffset = supplementaryViewOffset;
+    [self setNeedsUpdateConstraints];
+}
+
+- (void)updateConstraints
+{
+    [super updateConstraints];
+    [self updateLoadingSupplementaryViewConstraints];
+}
+
+- (void)awakeFromNib
+{
+    [super awakeFromNib];
+    
+    if (!self.loadingSupplementaryView) {
+        UIView<COOLLoadingSupplementaryView> *loadingView = [self createLoadingSupplementaryView];
+        [self addSubview:loadingView];
+        self.loadingSupplementaryView = loadingView;
+    }
 }
 
 #pragma mark - Animations

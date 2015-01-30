@@ -32,6 +32,8 @@
 @property (nonatomic, weak) IBOutlet UIView *errorSupplementaryView;
 @property (nonatomic, weak) IBOutlet UIView<COOLLoadingSupplementaryView> *loadingSupplementaryView;
 
+@property (nonatomic, assign) CGPoint supplementaryViewOffset;
+
 @property (nonatomic, weak) IBOutlet id<COOLLoadableContentViewDelegate> delegate;
 
 @property (nonatomic, copy, readonly) NSString *loadingState;
