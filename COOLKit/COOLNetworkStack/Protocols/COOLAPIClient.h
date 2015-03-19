@@ -10,13 +10,23 @@
 #import "COOLAPIClientBlocks.h"
 #import "COOLAPIRequestSerialization.h"
 #import "COOLAPIResponseSerialization.h"
+#import "COOLNetworkActivityLogger.h"
+
+@protocol COOLSessionManager <NSObject>
+
+- (NSURLSessionDataTask *)dataTaskWithRequest:(NSURLRequest *)request
+                            completionHandler:(void (^)(NSURLResponse *response, id responseObject, NSError *error))completionHandler;
+
+- (NSURL *)baseURL;
+
+@end
 
 @protocol COOLAPIClient <NSObject>
 
-- (instancetype)initWithBaseURL:(NSURL *)url
-           sessionConfiguration:(NSURLSessionConfiguration *)configuration
-              requestSerializer:(id<COOLAPIRequestSerialization>)requestSerializer
-             responseSerializer:(id<COOLAPIResponseSerialization>)responseSerializer;
+@property (nonatomic, strong) id<COOLNetworkActivityLogger> networkActivityLogger;
+@property (nonatomic, strong) id<COOLSessionManager> sessionManager;
+@property (nonatomic, strong) id<COOLAPIRequestSerialization> requestSerializer;
+@property (nonatomic, strong) id<COOLAPIResponseSerialization> responseSerializer;
 
 - (NSURLSessionDataTask *)dataTaskWithAPIRequest:(COOLAPIRequest *)request
                                          success:(COOLAPIClientSuccessBlock)success
@@ -24,8 +34,5 @@
 
 - (NSURLSessionDataTask *)dataTaskWithAPIRequest:(COOLAPIRequest *)request
                                completionHandler:(COOLAPIClientCompletionBlock)completionHandler;
-
-- (id<COOLAPIRequestSerialization>)requestSerializer;
-- (id<COOLAPIResponseSerialization>)responseSerializer;
 
 @end
