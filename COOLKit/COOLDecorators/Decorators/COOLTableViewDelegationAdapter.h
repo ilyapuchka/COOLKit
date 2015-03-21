@@ -12,7 +12,7 @@
 #import "COOLTableViewEditingDelegate.h"
 #import "COOLTableViewDataSourceDelegate.h"
 
-@interface COOLTableViewDelegationDecorator : NSObject <COOLTableViewDataSourceDelegate, COOLTableViewDisplayDataSource>
+@interface COOLTableViewDelegationAdapter : NSObject <COOLTableViewDataSourceDelegate>
 
 @property (nonatomic, strong) IBOutlet id<COOLTableViewDisplayDataSource> displayDataSource;
 @property (nonatomic, strong) IBOutlet id<COOLTableViewEventsResponder> eventsResponder;

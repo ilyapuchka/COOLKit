@@ -33,7 +33,7 @@
 		09EF1D711A3627080045DFFE /* COOLAPIResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EF1D4C1A3627080045DFFE /* COOLAPIResponse.m */; };
 		09EF1D731A3627080045DFFE /* COOLNetworkActivityLoggerImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EF1D531A3627080045DFFE /* COOLNetworkActivityLoggerImpl.m */; };
 		09EF1D8E1A3790FB0045DFFE /* COOLComposedTableViewDataSourceDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EF1D801A3790FB0045DFFE /* COOLComposedTableViewDataSourceDelegate.m */; };
-		09EF1D901A3790FB0045DFFE /* COOLTableViewDelegationDecorator.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EF1D851A3790FB0045DFFE /* COOLTableViewDelegationDecorator.m */; };
+		09EF1D901A3790FB0045DFFE /* COOLTableViewDelegationAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EF1D851A3790FB0045DFFE /* COOLTableViewDelegationAdapter.m */; };
 		09EF1D981A3793660045DFFE /* COOLListViewDecorator.m in Sources */ = {isa = PBXBuildFile; fileRef = 09EF1D971A3793660045DFFE /* COOLListViewDecorator.m */; };
 		94FDD26C979888F331CAB11C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F133CAF0072657D852B9CDCF /* libPods.a */; };
 		C3BE92971A48988600038684 /* AFHTTPResponseSerializer+COOLAPIResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = C3BE92961A48988600038684 /* AFHTTPResponseSerializer+COOLAPIResponseSerialization.m */; };
@@ -129,8 +129,8 @@
 		09EF1D7F1A3790FB0045DFFE /* COOLComposedTableViewDataSourceDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COOLComposedTableViewDataSourceDelegate.h; sourceTree = "<group>"; };
 		09EF1D801A3790FB0045DFFE /* COOLComposedTableViewDataSourceDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COOLComposedTableViewDataSourceDelegate.m; sourceTree = "<group>"; };
 		09EF1D811A3790FB0045DFFE /* COOLDecorators.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COOLDecorators.h; sourceTree = "<group>"; };
-		09EF1D841A3790FB0045DFFE /* COOLTableViewDelegationDecorator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COOLTableViewDelegationDecorator.h; sourceTree = "<group>"; };
-		09EF1D851A3790FB0045DFFE /* COOLTableViewDelegationDecorator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COOLTableViewDelegationDecorator.m; sourceTree = "<group>"; };
+		09EF1D841A3790FB0045DFFE /* COOLTableViewDelegationAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COOLTableViewDelegationAdapter.h; sourceTree = "<group>"; };
+		09EF1D851A3790FB0045DFFE /* COOLTableViewDelegationAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COOLTableViewDelegationAdapter.m; sourceTree = "<group>"; };
 		09EF1D861A3790FB0045DFFE /* COOLTableViewDisplayDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COOLTableViewDisplayDataSource.h; sourceTree = "<group>"; };
 		09EF1D871A3790FB0045DFFE /* COOLTableViewEditingDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COOLTableViewEditingDelegate.h; sourceTree = "<group>"; };
 		09EF1D881A3790FB0045DFFE /* COOLTableViewEventsResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COOLTableViewEventsResponder.h; sourceTree = "<group>"; };
@@ -212,8 +212,8 @@
 				09BFBF0D1A56D1F100823CAB /* COOLDataSourceDelegateViewDecorator.h */,
 				09BFBF0E1A56D1F100823CAB /* COOLDataSourceDelegateViewDecorator.m */,
 				09EF1D911A37913F0045DFFE /* COOLTableViewDecorator.h */,
-				09EF1D841A3790FB0045DFFE /* COOLTableViewDelegationDecorator.h */,
-				09EF1D851A3790FB0045DFFE /* COOLTableViewDelegationDecorator.m */,
+				09EF1D841A3790FB0045DFFE /* COOLTableViewDelegationAdapter.h */,
+				09EF1D851A3790FB0045DFFE /* COOLTableViewDelegationAdapter.m */,
 				09EF1D861A3790FB0045DFFE /* COOLTableViewDisplayDataSource.h */,
 				09EF1D871A3790FB0045DFFE /* COOLTableViewEditingDelegate.h */,
 				09EF1D881A3790FB0045DFFE /* COOLTableViewEventsResponder.h */,
@@ -575,7 +575,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09EF1D901A3790FB0045DFFE /* COOLTableViewDelegationDecorator.m in Sources */,
+				09EF1D901A3790FB0045DFFE /* COOLTableViewDelegationAdapter.m in Sources */,
 				09BFBF071A56C89900823CAB /* COOLComposedIndexPathsMapping.m in Sources */,
 				0907EFFE1A573CCA0036F0AF /* UITableView+Decoration.m in Sources */,
 				09EF1D711A3627080045DFFE /* COOLAPIResponse.m in Sources */,

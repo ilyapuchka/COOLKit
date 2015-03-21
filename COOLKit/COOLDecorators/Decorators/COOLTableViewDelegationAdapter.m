@@ -6,16 +6,16 @@
 //  Copyright (c) 2014 Ilya Puchka. All rights reserved.
 //
 
-#import "COOLTableViewDelegationDecorator.h"
+#import "COOLTableViewDelegationAdapter.h"
 #import "COOLComposition.h"
 
-@interface COOLTableViewDelegationDecorator()
+@interface COOLTableViewDelegationAdapter()
 
 @property (nonatomic, strong) COOLComposition *composition;
 
 @end
 
-@implementation COOLTableViewDelegationDecorator
+@implementation COOLTableViewDelegationAdapter
 
 @synthesize displayDataSource = _displayDataSource;
 @synthesize eventsResponder = _eventsResponder;
