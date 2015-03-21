@@ -32,10 +32,11 @@ typedef void(^COOLBlockOnTableViewFromIndexPathToIndexPath)(id<COOLTableViewData
  
  Implements following methods:
  -tableView:numberOfRowsInSection: //returns 0
- -tableView:cellForRowAtIndexPath:
- -tableView:didSelectRowAtIndexPath:
+ -tableView:cellForRowAtIndexPath: //calls -tableView:cellForRowAtIndexPath: on particular data source
+ -tableView:didSelectRowAtIndexPath: //calls -tableView:didSelectRowAtIndexPath: on particular delegate
  
- If you need to implement other UITableViewDelegate/UITableViewDataSource methods you should sublcass this class and implement these methods using -perform... or -performAndReturn...
+ If you need to implement other UITableViewDelegate/UITableViewDataSource methods you should sublcass this class and implement methods you need.
+ @see COOLWrappedTableViewDataSourceDelegate(PerformOnTableView)
  
  */
 @interface COOLWrappedTableViewDataSourceDelegate : NSObject <COOLTableViewDataSourceDelegate>
@@ -66,13 +67,20 @@ typedef void(^COOLBlockOnTableViewFromIndexPathToIndexPath)(id<COOLTableViewData
 
 /*
  Contains helper methods for subclasses. Provide blocks with dataSource for passed section or indexPath, table view wrapper and recalculated section or indexPath.
+ 
+ You use -perfromOnTableView:... to create a context to use table view data source or delegate objects, contained by composed data source. UITableView object passed to the block is a wrapper for actual table view. id<COOLTableViewDataSourceDelegate> passed to the block is a particular data source/delegate object from composition that corresponds to current section or index path. Index path or section passed to the block is calculated based on current indexPath/section but in context of particular data source/delegate.
+ 
+ @see COOLTableViewWrapper
+ 
  Usage:
  
  - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
  {
- return [self performAndReturnOnTableView:tableView atIndexPath:indexPath block:^id(id<COOLTableViewDataSourceDelegate> _dataSource, UITableView *_tableView, NSIndexPath *_indexPath) {
- return [_dataSource tableView:_tableView cellForRowAtIndexPath:_indexPath];
- }];
+     UITableViewCell *cell;
+     [self performOnTableView:tableView atIndexPath:indexPath block:^void(id<COOLTableViewDataSourceDelegate> _dataSource, UITableView *_tableView, NSIndexPath *_indexPath, __autoreleasing id *result) {
+     *result = [_dataSource tableView:_tableView cellForRowAtIndexPath:_indexPath];
+     } result:&cell];
+     return cell;
  }
  */
 @interface COOLWrappedTableViewDataSourceDelegate(PerformOnTableView)
