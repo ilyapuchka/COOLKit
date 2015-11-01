@@ -129,12 +129,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     [self updateMappingsWithTableView:tableView];
-    NSNumber *numberOfRows;
-    [self performOnTableView:tableView inSection:section block:^(id<COOLTableViewDataSourceDelegate> _dataSource, UITableView *_tableView, NSInteger _section, __autoreleasing id *result) {
-        NSInteger _numberOfRows = [_dataSource tableView:_tableView numberOfRowsInSection:_section];
-        *result = @(_numberOfRows);
-    } result:&numberOfRows];
-    return [numberOfRows integerValue];
+    return [super tableView:tableView numberOfRowsInSection:section];
 }
 
 #pragma mark - COOLTableViewDisplayDataSource

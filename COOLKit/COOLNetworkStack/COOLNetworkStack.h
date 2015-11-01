@@ -9,12 +9,10 @@
 #ifndef _COOLNETWORKSTACK_
 #define _COOLNETWORKSTACK_
 
-#import "AFNetworking.h"
-#import "COOLAPIClientImpl.h"
+#import "COOLAPIClient.h"
 #import "COOLNetworkActivityLoggerImpl.h"
-#import "AFHTTPRequestSerializer+COOLAPIRequestSerialization.h"
-#import "COOLJSONResponseSerializer.h"
-#import "COOLMapperImpl.h"
+#import "COOLMapper.h"
+#import "COOLMapping.h"
 #import "COOLAPIRequest.h"
 #import "COOLAPIResponse.h"
 

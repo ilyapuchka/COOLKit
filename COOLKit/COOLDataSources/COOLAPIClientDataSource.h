@@ -7,7 +7,7 @@
 //
 
 #import "COOLDataSource.h"
-#import "COOLAPIClientImpl.h"
+#import "COOLAPIClient.h"
 #import "COOLAPIResponse.h"
 #import "COOLLoadingProcess.h"
 
@@ -18,12 +18,12 @@
  */
 @interface COOLAPIClientDataSource : COOLDataSource
 
-- (instancetype)initWithAPIClient:(id<COOLAPIClient>)apiClient;
+- (instancetype)initWithAPIClient:(COOLAPIClient *)apiClient;
 
 /**
  *  Instance of COOLAPIClientImpl used for loading content.
  */
-@property (nonatomic, strong) id<COOLAPIClient> apiClient;
+@property (nonatomic, strong) COOLAPIClient *apiClient;
 
 /**
  *  Response from api client

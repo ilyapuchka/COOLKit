@@ -9,7 +9,7 @@
 #ifndef COOLNetworkStack_COOLAPIClientBlocks_h
 #define COOLNetworkStack_COOLAPIClientBlocks_h
 
-@protocol COOLAPIResponse;
+#import "COOLAPIResponse.h"
 
 typedef void(^COOLAPIClientSuccessBlock)(id<COOLAPIResponse> response);
 typedef void(^COOLAPIClientFailureBlock)(id<COOLAPIResponse> response);

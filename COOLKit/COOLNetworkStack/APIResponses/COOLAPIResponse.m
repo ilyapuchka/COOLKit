@@ -14,6 +14,7 @@
 @property (nonatomic, copy, readwrite) NSHTTPURLResponse *response;
 @property (nonatomic, copy, readwrite) NSError *error;
 @property (nonatomic, strong, readwrite) id responseObject;
+@property (nonatomic, strong, readwrite) id mappedResponseObject;
 
 @end
 
@@ -21,14 +22,7 @@
 
 + (instancetype)responseWithTask:(NSURLSessionDataTask *)task response:(NSHTTPURLResponse *)response responseObject:(id)responseObject httpError:(NSError *)httpError
 {
-    COOLAPIResponse *apiResponse = [[[self class] alloc] initWithTask:task response:response responseObject:responseObject error:httpError];
-    if (!httpError) {
-        NSError *mappingError;
-        if (![apiResponse mapResponseObject:&mappingError]) {
-            apiResponse.error = mappingError;
-        }
-    }
-    return apiResponse;
+    return [[[self class] alloc] initWithTask:task response:response responseObject:responseObject error:httpError];
 }
 
 - (instancetype)initWithTask:(NSURLSessionDataTask *)task
@@ -38,10 +32,17 @@
 {
     self = [super init];
     if (self) {
-        self.task = task;
-        self.responseObject = responseObject;
-        self.response = response;
-        self.error = error;
+        _task = [task copy];
+        _response = [response copy];
+        _error = [error copy];
+        _responseObject = responseObject;
+        
+        if (!_error) {
+            NSError *mappingError;
+            if (![self mapResponseObject:&mappingError]) {
+                _error = mappingError;
+            }
+        }
     }
     return self;
 }
@@ -54,13 +55,9 @@
                                                      error:self.error];
 }
 
-- (id)mappedResponseObject
-{
-    return self.responseObject;
-}
-
 - (BOOL)mapResponseObject:(NSError *__autoreleasing *)error
 {
+    _mappedResponseObject = self.responseObject;
     return YES;
 }
 
@@ -71,7 +68,7 @@
 
 - (BOOL)noContent
 {
-    return [self succes];
+    return NO;
 }
 
 - (BOOL)cancelled

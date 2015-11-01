@@ -31,7 +31,7 @@ typedef void(^COOLBlockOnTableViewFromIndexPathToIndexPath)(id<COOLTableViewData
  Class for wrapping number of table view data sources and delegates.
  
  Implements following methods:
- -tableView:numberOfRowsInSection: //returns 0
+ -tableView:numberOfRowsInSection: //calls -tableView:numberOfRowsInSection: on particular data source
  -tableView:cellForRowAtIndexPath: //calls -tableView:cellForRowAtIndexPath: on particular data source
  -tableView:didSelectRowAtIndexPath: //calls -tableView:didSelectRowAtIndexPath: on particular delegate
  
@@ -54,7 +54,7 @@ typedef void(^COOLBlockOnTableViewFromIndexPathToIndexPath)(id<COOLTableViewData
 - (id<COOLIndexPathsMapping>)mappingForSection:(NSInteger)section;
 - (id<COOLIndexPathsMapping>)mappingForIndexPath:(NSIndexPath *)indexPath;
 
-//subclasses should override next two methods, base implementation returns nil
+//subclasses should override next two methods, base implementation raises exception
 - (id<COOLTableViewDataSourceDelegate>)tableViewDataSourceForSection:(NSInteger)section;
 - (id<COOLTableViewDataSourceDelegate>)tableViewDataSourceForIndexPath:(NSIndexPath *)indexPath;
 

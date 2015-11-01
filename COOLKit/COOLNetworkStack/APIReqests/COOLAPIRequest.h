@@ -13,14 +13,22 @@ static NSString * const COOLAPIPOSTRequest = @"POST";
 
 @protocol COOLAPIResponse;
 
-@interface COOLAPIRequest : NSObject <NSCopying>
+@interface COOLAPIRequest : NSObject <NSCopying> {
+    NSString *_method;
+    NSString *_path;
+    NSDictionary *_parameters;
+    NSURLRequest *_request;
+}
 
 @property (nonatomic, copy, readonly) NSString *method;
 @property (nonatomic, copy, readonly) NSString *path;
 @property (nonatomic, copy, readonly) NSDictionary *parameters;
+@property (nonatomic, copy, readonly) NSURLRequest *request;
 
 - (instancetype)initWithMethod:(NSString *)method
                           path:(NSString *)path
                     parameters:(NSDictionary *)parameters;
+
+- (instancetype)initWithRequest:(NSURLRequest *)request;
 
 @end

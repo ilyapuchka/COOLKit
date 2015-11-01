@@ -17,7 +17,7 @@
 
 @implementation COOLAPIClientDataSource
 
-- (instancetype)initWithAPIClient:(id<COOLAPIClient>)apiClient
+- (instancetype)initWithAPIClient:(COOLAPIClient *)apiClient
 {
     self = [super init];
     if (self) {
@@ -28,18 +28,19 @@
 
 - (BOOL)didCompleteLoadingWithSuccess
 {
-    return [self.response succes];
+    return (self.response.error == nil && self.response.responseObject != nil && self.response.mappedResponseObject != nil);
 }
 
 - (BOOL)didCompleteLoadingWithNoContent
 {
-    return [self.response noContent];
+    return NO;
 }
 
 - (void)completeLoadingWithTask:(NSURLSessionDataTask *)task response:(id<COOLAPIResponse>)response loadingProcess:(COOLLoadingProcess *)loadingProcess
 {
     if (![response.task.originalRequest isEqual:task.originalRequest] ||
-        [response cancelled] || !loadingProcess.isCurrent) {
+        ([response.error.domain isEqualToString:NSURLErrorDomain] && response.error.code == NSURLErrorCancelled) ||
+        !loadingProcess.isCurrent) {
         if (!loadingProcess.isCancelled) {
             [loadingProcess ignore];
         }
